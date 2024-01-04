@@ -26,15 +26,15 @@ Once the above contracts have been deployed the following additional 3rd Party a
 |-------------------------------|-----------------------------------|--------------------------------------------|--------|
 |Allo Proxy                     | RESERVED_ALLO_CORE                | 0x1133eA7Af70876e64665ecD07C0A0476d09465a1 | 421614 |
 |Allo Register                  | RESERVED_ALLO_PROFILE_REGISTER    | 0x4AAcca72145e1dF2aeC137E1f3C5E3D75DB8b5f3 | 421614 |
-|Chainlink Router (Optimism)    | RESERVED_CHAINLINK_ROUTER_CLIENT  | 0xcc5a0b910d9e9504a7561934bed294c51285a78d | 420    |
+|Chainlink Router (Sepolia)    | RESERVED_CHAINLINK_ROUTER_CLIENT  | 0x0bf3de8c5d3e8a2b34d2beeb17abfcebaf363a59 | 420    |
 |Chainlink Router (Arbitrum)    | RESERVED_CHAINLINK_ROUTER_CLIENT  | 0x2a9c5afb0d0e4bab2bcdae109ec4b0c4be15a165 | 421614 |
 
 ### Destination Configurations 
 
 Additional to the above addresses the following destination configurations should be set in the Margari Register on each chain where Margari is deployed. 
 
-#### OP Goerli
-["420","2664363617261496610","0xcc5a0b910d9e9504a7561934bed294c51285a78d",["0xb1D4538B4571d411F07960EF2838Ce337FE1E80E","0xE591bf0A0CF924A0674d7792db046B23CEbF5f34"],"<deployment address of MReciever contract>"]
+#### Sepolia
+["11155111","16015286601757825753","0x0bf3de8c5d3e8a2b34d2beeb17abfcebaf363a59",["0x779877A7B0D9E8603169DdbD7836e478b4624789","0x097D90c9d3E0B50Ca60e1ae45F6A81010f9FB534"],"<deployment address of MReciever contract>"]
 
 #### Arbitrum Sepolia
 ["421614","3478487238524512106","0x2a9c5afb0d0e4bab2bcdae109ec4b0c4be15a165",["0xdc2CC710e42857672E7907CF474a69B63B93089f","0xE591bf0A0CF924A0674d7792db046B23CEbF5f34"],"<deployment address of MReciever contract>"]
@@ -54,10 +54,10 @@ Additional to the above addresses the following destination configurations shoul
 | 421614   | MargariStrategy.sol | 0x79193FF8b91E3f08a5731c28FEC74190390DeF61 |
 | 421614   | MProjectFactory.sol | 0xDF40e5db444289DE142286b9ee7076D9Aa2D92Dc |
 |          |                     |                                            |
-|*Optimism*|   (Testnet)         |                                            |
+|*Sepolia* |   (Testnet)         |                                            |
 | 11155111 | MRegister.sol       | 0x261f61460c2Ca01284f1Df3664985ec9322a867B |
-| 11155111 | GVaultFactory.sol   |                                            |
-| 11155111 | GiltContract.sol    |                                            |
-| 11155111 | MSender.sol         |                                            |
-| 11155111 | MReciever.sol       |                                            |        
-| 11155111 | Margari.sol         |                                            |
+| 11155111 | GVaultFactory.sol   | 0xC0f1b3B9E7316d021193163e597452225748ac6F |
+| 11155111 | GiltContract.sol    | 0x79193FF8b91E3f08a5731c28FEC74190390DeF61 |
+| 11155111 | MSender.sol         | 0x536936c3d3e38eC6A97585c31F5063b770Cf2EAd |
+| 11155111 | MReciever.sol       | 0x9b8E907b2e91e8E2bDcCF30505fF7d508C190544 |        
+| 11155111 | Margari.sol         | 0x16B0975dc8B4eaDB28F2a776C8BcE499875E3Bb8 |
