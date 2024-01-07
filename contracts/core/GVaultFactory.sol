@@ -19,7 +19,7 @@ contract GVaultFactory is IGVaultFactory, IMVersion {
     }
 
     string constant name = "RESERVED_G_VAULT_FACTORY";
-    uint256 constant version = 1; 
+    uint256 constant version = 2; 
 
     string constant GILT_CONTRACT_CA = "RESERVED_GILT_CONTRACT";
     string constant M_ADMIN_CA = "RESERVED_M_ADMIN";
@@ -50,9 +50,9 @@ contract GVaultFactory is IGVaultFactory, IMVersion {
     }
 
     function createVault(Gilt memory _gilt) external giltContractOnly returns (address _vault){
-        address vault_ = address(new GVault(address(register), _gilt));
-        vaults.push(vault_);
-        isKnownV[vault_] = true; 
+        _vault = address(new GVault(address(register), _gilt));
+        vaults.push(_vault);
+        isKnownV[_vault] = true; 
         return _vault; 
     }
 

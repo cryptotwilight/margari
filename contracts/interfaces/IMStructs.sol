@@ -63,8 +63,10 @@ struct Contributor {
 struct Project { 
     uint256 projectId; 
     string name; 
-    uint256 alloPoolId; 
+    uint256 alloPoolId;
+    bytes32 alloProfileId;  
     address payoutCurrency; 
+    uint256 budget;
     uint256 [] deliverableIds; 
     address [] contributors; 
 }
@@ -74,12 +76,14 @@ struct ProjectAllocation {
     uint256 newAllocation; 
 }
 
-struct PayoutDirective{
+struct PaymentDirective {
     uint256 id; 
     Contributor contributor; 
     uint256 projectId; 
+    bytes32 alloProfileId; 
     uint256 deliverableId; 
     uint256 amount; 
+    address erc20; 
 }
 
 struct Deliverable {

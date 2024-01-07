@@ -1,0 +1,556 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"bondFunds(address,uint256)": "2dcaf5bb",
+			"burnLocalisedGilt((address,uint256,uint256,uint256,address,uint256))": "fb39a0a6",
+			"getGilt(uint256)": "19e740e7",
+			"isLocalBonded(uint256)": "296c6b03",
+			"isLocked(uint256)": "f6aacfb1",
+			"lockGilt(uint256)": "dcc4df73",
+			"mintLocalisedGilt(((address,uint256,uint256,uint256,address,uint256),bytes32,uint256,address),address)": "b6b75251",
+			"unBondFunds(uint256)": "f5537408",
+			"unlockGilt(uint256)": "cf9f2bc3"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_erc20",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_amount",
+					"type": "uint256"
+				}
+			],
+			"name": "bondFunds",
+			"outputs": [
+				{
+					"components": [
+						{
+							"internalType": "address",
+							"name": "erc20",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "amount",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "creationDate",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "chainId",
+							"type": "uint256"
+						},
+						{
+							"internalType": "address",
+							"name": "giltContract",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "id",
+							"type": "uint256"
+						}
+					],
+					"internalType": "struct Gilt",
+					"name": "_gilt",
+					"type": "tuple"
+				}
+			],
+			"stateMutability": "payable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"components": [
+						{
+							"internalType": "address",
+							"name": "erc20",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "amount",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "creationDate",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "chainId",
+							"type": "uint256"
+						},
+						{
+							"internalType": "address",
+							"name": "giltContract",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "id",
+							"type": "uint256"
+						}
+					],
+					"internalType": "struct Gilt",
+					"name": "_gilt",
+					"type": "tuple"
+				}
+			],
+			"name": "burnLocalisedGilt",
+			"outputs": [
+				{
+					"components": [
+						{
+							"components": [
+								{
+									"internalType": "address",
+									"name": "erc20",
+									"type": "address"
+								},
+								{
+									"internalType": "uint256",
+									"name": "amount",
+									"type": "uint256"
+								},
+								{
+									"internalType": "uint256",
+									"name": "creationDate",
+									"type": "uint256"
+								},
+								{
+									"internalType": "uint256",
+									"name": "chainId",
+									"type": "uint256"
+								},
+								{
+									"internalType": "address",
+									"name": "giltContract",
+									"type": "address"
+								},
+								{
+									"internalType": "uint256",
+									"name": "id",
+									"type": "uint256"
+								}
+							],
+							"internalType": "struct Gilt",
+							"name": "gilt",
+							"type": "tuple"
+						},
+						{
+							"internalType": "bytes32",
+							"name": "alloProfileId",
+							"type": "bytes32"
+						},
+						{
+							"internalType": "uint256",
+							"name": "projectId",
+							"type": "uint256"
+						},
+						{
+							"internalType": "address",
+							"name": "owner",
+							"type": "address"
+						}
+					],
+					"internalType": "struct TransmittedGilt",
+					"name": "_tGilt",
+					"type": "tuple"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_giltId",
+					"type": "uint256"
+				}
+			],
+			"name": "getGilt",
+			"outputs": [
+				{
+					"components": [
+						{
+							"internalType": "address",
+							"name": "erc20",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "amount",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "creationDate",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "chainId",
+							"type": "uint256"
+						},
+						{
+							"internalType": "address",
+							"name": "giltContract",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "id",
+							"type": "uint256"
+						}
+					],
+					"internalType": "struct Gilt",
+					"name": "_gilt",
+					"type": "tuple"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_giltId",
+					"type": "uint256"
+				}
+			],
+			"name": "isLocalBonded",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "_isLocalBonded",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_giltId",
+					"type": "uint256"
+				}
+			],
+			"name": "isLocked",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "_isLocked",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_giltId",
+					"type": "uint256"
+				}
+			],
+			"name": "lockGilt",
+			"outputs": [
+				{
+					"components": [
+						{
+							"internalType": "address",
+							"name": "erc20",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "amount",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "creationDate",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "chainId",
+							"type": "uint256"
+						},
+						{
+							"internalType": "address",
+							"name": "giltContract",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "id",
+							"type": "uint256"
+						}
+					],
+					"internalType": "struct Gilt",
+					"name": "_gilt",
+					"type": "tuple"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"components": [
+						{
+							"components": [
+								{
+									"internalType": "address",
+									"name": "erc20",
+									"type": "address"
+								},
+								{
+									"internalType": "uint256",
+									"name": "amount",
+									"type": "uint256"
+								},
+								{
+									"internalType": "uint256",
+									"name": "creationDate",
+									"type": "uint256"
+								},
+								{
+									"internalType": "uint256",
+									"name": "chainId",
+									"type": "uint256"
+								},
+								{
+									"internalType": "address",
+									"name": "giltContract",
+									"type": "address"
+								},
+								{
+									"internalType": "uint256",
+									"name": "id",
+									"type": "uint256"
+								}
+							],
+							"internalType": "struct Gilt",
+							"name": "gilt",
+							"type": "tuple"
+						},
+						{
+							"internalType": "bytes32",
+							"name": "alloProfileId",
+							"type": "bytes32"
+						},
+						{
+							"internalType": "uint256",
+							"name": "projectId",
+							"type": "uint256"
+						},
+						{
+							"internalType": "address",
+							"name": "owner",
+							"type": "address"
+						}
+					],
+					"internalType": "struct TransmittedGilt",
+					"name": "_tGilt",
+					"type": "tuple"
+				},
+				{
+					"internalType": "address",
+					"name": "_to",
+					"type": "address"
+				}
+			],
+			"name": "mintLocalisedGilt",
+			"outputs": [
+				{
+					"components": [
+						{
+							"internalType": "address",
+							"name": "erc20",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "amount",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "creationDate",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "chainId",
+							"type": "uint256"
+						},
+						{
+							"internalType": "address",
+							"name": "giltContract",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "id",
+							"type": "uint256"
+						}
+					],
+					"internalType": "struct Gilt",
+					"name": "_gilt",
+					"type": "tuple"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_giltId",
+					"type": "uint256"
+				}
+			],
+			"name": "unBondFunds",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "_erc20",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_amount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "_to",
+					"type": "address"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_giltId",
+					"type": "uint256"
+				}
+			],
+			"name": "unlockGilt",
+			"outputs": [
+				{
+					"components": [
+						{
+							"internalType": "address",
+							"name": "erc20",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "amount",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "creationDate",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "chainId",
+							"type": "uint256"
+						},
+						{
+							"internalType": "address",
+							"name": "giltContract",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "id",
+							"type": "uint256"
+						}
+					],
+					"internalType": "struct Gilt",
+					"name": "_gilt",
+					"type": "tuple"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}

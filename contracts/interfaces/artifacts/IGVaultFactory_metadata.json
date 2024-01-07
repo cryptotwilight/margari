@@ -1,0 +1,105 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "erc20",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "creationDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "chainId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "giltContract",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Gilt",
+						"name": "_gilt",
+						"type": "tuple"
+					}
+				],
+				"name": "createVault",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_vault",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/interfaces/IGVaultFactory.sol": "IGVaultFactory"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interfaces/IGVaultFactory.sol": {
+			"keccak256": "0xb87a06bece3e40c0ebc7bd1a677867709559d9cee31eed46658cc354a38977e6",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://08c09f13808bf96a0bf6196680c6247f10e085dfc140b72f6c412bf5581f2b09",
+				"dweb:/ipfs/QmcRu2Gv411ePg9zMKWicbNQR6qaQvGhcqC1QwLduttaPi"
+			]
+		},
+		"contracts/interfaces/IMStructs.sol": {
+			"keccak256": "0x300b643c5e6db4d92cfad6b816121061ffb122c54b44ddce7247a521f0c5a6cd",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://19a4dcd4f6b1baf167f48eb6501d1735721dab177de4f89742504055886ce901",
+				"dweb:/ipfs/QmbbNyPeMGeXAsi3zH9NKGSHoomvcpzx981zgfwoyShLPQ"
+			]
+		}
+	},
+	"version": 1
+}

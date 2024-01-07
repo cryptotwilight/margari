@@ -1,0 +1,96 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "erc20",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "creationDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "chainId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "giltContract",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Gilt",
+						"name": "_gilt",
+						"type": "tuple"
+					}
+				],
+				"name": "createVault",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_vault",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/core/GiltContract_flattened.sol": "IGVaultFactory"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/core/GiltContract_flattened.sol": {
+			"keccak256": "0xf7a7aa8eba8bf841ea5b975cb5d53378dab4ab904072b4db1ec5c464b174b6af",
+			"urls": [
+				"bzz-raw://6aab174a018ea325550946ac4d542b3764966d5f98cbba52b2d703fb34d39aa8",
+				"dweb:/ipfs/QmbggXC5HphFwHALFi9Zoe44eXDZBff6oMjJpTX9RvBFtc"
+			]
+		}
+	},
+	"version": 1
+}

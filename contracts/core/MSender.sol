@@ -34,7 +34,7 @@ contract MSender is IMSender, IMVersion {
 
     string constant REGISTER_CA = "RESERVED_M_REGISTER";
     string constant MARGARI_CA = "RESERVED_MARGARI_CORE";
-    string constant ROUTER_CLIENT_CA = "CHAINLINK_ROUTER_CLIENT";
+    string constant ROUTER_CLIENT_CA = "RESERVED_CHAINLINK_ROUTER_CLIENT";
     string constant M_ADMIN_CA = "RESERVED_M_ADMIN";
 
 
@@ -70,8 +70,7 @@ contract MSender is IMSender, IMVersion {
         return sendStatementBySendId[_sendId];
     }
 
-    function getTransmittedGilt(uint256 _sendId) view external
-         returns (TransmittedGilt memory _gilt){
+    function getTransmittedGilt(uint256 _sendId) view external returns (TransmittedGilt memory _gilt){
         return transmittedGiltBySendId[_sendId];
     }
 

@@ -1,0 +1,189 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_sendId",
+						"type": "uint256"
+					}
+				],
+				"name": "getTransmittedGilt",
+				"outputs": [
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "address",
+										"name": "erc20",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "amount",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "creationDate",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "chainId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "address",
+										"name": "giltContract",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "id",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct Gilt",
+								"name": "gilt",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "alloProfileId",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "uint256",
+								"name": "projectId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							}
+						],
+						"internalType": "struct TransmittedGilt",
+						"name": "_gilt",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_destinationChainId",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "erc20",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "creationDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "chainId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "giltContract",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Gilt",
+						"name": "_gilt",
+						"type": "tuple"
+					},
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "_alloProfileId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_projectId",
+						"type": "uint256"
+					}
+				],
+				"name": "sendGilt",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_sendId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/core/MSender_flattened.sol": "IMSender"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/core/MSender_flattened.sol": {
+			"keccak256": "0xaf2d19fb99df682110f7146a05da46281f5cb45d846f23131f7270e1c8e18a3d",
+			"urls": [
+				"bzz-raw://d1986911e526e4ae63e6e3d6a89b7ae74ce2309943af2162238e6a2e28726402",
+				"dweb:/ipfs/QmcCCh7xUjRoMWeuSX2itaeqyJbBtNXRH8qAnqM4HPpw13"
+			]
+		}
+	},
+	"version": 1
+}

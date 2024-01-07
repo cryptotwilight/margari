@@ -1,0 +1,167 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "claimGilts",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "giltIds",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "bytes32[]",
+						"name": "_alloProjectIds",
+						"type": "bytes32[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_chainId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "erc20",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_remoteRecipient",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "_alloProjectId",
+						"type": "bytes32"
+					}
+				],
+				"name": "sendFunds",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_sendId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "erc20",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "creationDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "chainId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "giltContract",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Gilt",
+						"name": "gilt",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_destinationChainId",
+						"type": "uint256"
+					}
+				],
+				"name": "sendGilt",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_sendId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/interfaces/IMagari.sol": "IMagari"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interfaces/IMStructs.sol": {
+			"keccak256": "0x300b643c5e6db4d92cfad6b816121061ffb122c54b44ddce7247a521f0c5a6cd",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://19a4dcd4f6b1baf167f48eb6501d1735721dab177de4f89742504055886ce901",
+				"dweb:/ipfs/QmbbNyPeMGeXAsi3zH9NKGSHoomvcpzx981zgfwoyShLPQ"
+			]
+		},
+		"contracts/interfaces/IMagari.sol": {
+			"keccak256": "0xa849f3eae8e95fe1d7314d60c727ba249bbff5f3ee65e2add05034983f993a7b",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://ce07229aa1b4310ce1bc29dcfd0b7c99d9524a05fd26bf16ffcdf5d2f29f6379",
+				"dweb:/ipfs/QmapGA83LmaCqiFTUs7cPQhYConiyajGe8RsZDq5ZfmYUf"
+			]
+		}
+	},
+	"version": 1
+}

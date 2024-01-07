@@ -10,7 +10,7 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 contract GVault is IGVault, IMVersion { 
 
     string constant name = "G_VAULT";
-    uint256 constant version = 1; 
+    uint256 constant version = 2; 
 
     address constant NATIVE = 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE;
 
@@ -18,6 +18,7 @@ contract GVault is IGVault, IMVersion {
     IMRegister register; 
     address immutable self;
     bool expended = false; 
+    bool committed = false; 
 
     constructor(address _register, Gilt memory _gilt) { 
         gilt = _gilt;
@@ -46,9 +47,10 @@ contract GVault is IGVault, IMVersion {
     }
 
     function storeFunds() external payable returns (bool _stored){
-        require(!expended, "vault expended");
+        require(!committed, "vault committed");
+        committed = true; 
         if(gilt.erc20 == NATIVE) {
-            require(msg.value == gilt.amount, " NATIVE token transmission mis-match");
+            require(msg.value >= gilt.amount, " NATIVE token transmission mis-match");
         }
         else {
             IERC20(gilt.erc20).transferFrom(msg.sender, self, gilt.amount);
@@ -57,6 +59,7 @@ contract GVault is IGVault, IMVersion {
     }
 
     function releaseFunds() external returns(bool _empty){
+        require(committed, "vault not committed");
         require(!expended, "vault expended");
         expended = true; 
         if(gilt.erc20 == NATIVE) {
@@ -66,6 +69,10 @@ contract GVault is IGVault, IMVersion {
             IERC20(gilt.erc20).approve(msg.sender, gilt.amount);
         }
         return expended; 
+    }
+
+    function isCommitted() view external returns(bool _isCommitted){
+        return committed; 
     }
 
     function isExpended() view external returns (bool _isExpended){

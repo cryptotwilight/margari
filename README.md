@@ -22,12 +22,12 @@ To build Margari using remix the contract deployment order listed below is to be
 
 Once the above contracts have been deployed the following additional 3rd Party address entries need to be made to the Margari Register:
 
-|Name                           | Required Registry Entry Name      | Contract                                   | Chain  |
-|-------------------------------|-----------------------------------|--------------------------------------------|--------|
-|Allo Proxy                     | RESERVED_ALLO_CORE                | 0x1133eA7Af70876e64665ecD07C0A0476d09465a1 | 421614 |
-|Allo Register                  | RESERVED_ALLO_PROFILE_REGISTER    | 0x4AAcca72145e1dF2aeC137E1f3C5E3D75DB8b5f3 | 421614 |
-|Chainlink Router (Sepolia)    | RESERVED_CHAINLINK_ROUTER_CLIENT  | 0x0bf3de8c5d3e8a2b34d2beeb17abfcebaf363a59 | 420    |
-|Chainlink Router (Arbitrum)    | RESERVED_CHAINLINK_ROUTER_CLIENT  | 0x2a9c5afb0d0e4bab2bcdae109ec4b0c4be15a165 | 421614 |
+|Name                           | Required Registry Entry Name      | Contract                                   | Chain    |
+|-------------------------------|-----------------------------------|--------------------------------------------|----------|
+|Allo Proxy                     | RESERVED_ALLO_CORE                | 0x1133eA7Af70876e64665ecD07C0A0476d09465a1 | 421614   |
+|Allo Register                  | RESERVED_ALLO_PROFILE_REGISTER    | 0x4AAcca72145e1dF2aeC137E1f3C5E3D75DB8b5f3 | 421614   |
+|Chainlink Router (Sepolia)     | RESERVED_CHAINLINK_ROUTER_CLIENT  | 0x0bf3de8c5d3e8a2b34d2beeb17abfcebaf363a59 | 11155111 |
+|Chainlink Router (Arbitrum)    | RESERVED_CHAINLINK_ROUTER_CLIENT  | 0x2a9c5afb0d0e4bab2bcdae109ec4b0c4be15a165 | 421614   |
 
 ### Destination Configurations 
 
@@ -41,23 +41,28 @@ Additional to the above addresses the following destination configurations shoul
 
 
 ## Deployed Contracts 
+The following are the deployed contracts for Margari. These contracts interact
 
 | Chain    | Contract            | Address                                    | 
 |----------|---------------------|--------------------------------------------|
 |*Arbitrum*|    (Testnet)        |                                            |
-| 421614   | MRegister.sol       | 0xC6C74d29f3FcC18DD3d5F394ec19b2516225400E |
-| 421614   | GVaultFactory.sol   | 0x6B6AD904CC3518FBeD1A86fFddC9d24d67AbD04B |
-| 421614   | GiltContract.sol    | 0x536936c3d3e38eC6A97585c31F5063b770Cf2EAd |
-| 421614   | MSender.sol         | 0x864CC382dd8C6047032D297a1bcFa13868F30AB3 |
-| 421614   | MReciever.sol       | 0x6141b27fB5c0038bA0a194077db5186baFCb0f9a |        
-| 421614   | Margari.sol         | 0xBE3024BAAEB9cD790947A92E6517E13717c673a5 |
-| 421614   | MargariStrategy.sol | 0x79193FF8b91E3f08a5731c28FEC74190390DeF61 |
-| 421614   | MProjectFactory.sol | 0xDF40e5db444289DE142286b9ee7076D9Aa2D92Dc |
-|          |                     |                                            |
+| 421614   | MRegister.sol       | [0x6aA7c51924143Bf05851C229c7bb0fB0D19c046D](https://sepolia.arbiscan.io/address/0x6aA7c51924143Bf05851C229c7bb0fB0D19c046D) |
+| 421614   | GVaultFactory.sol   | [0xaA8a63Ab079A5EF4cd5b51a95dE825D40c77ED9d](https://sepolia.arbiscan.io/address/0xaa8a63ab079a5ef4cd5b51a95de825d40c77ed9d) |
+| 421614   | GiltContract.sol    | [0x4Bee91F1707DaA7Bd7BA684a52aB1bdd8Cb38944](https://sepolia.arbiscan.io/address/0x4Bee91F1707DaA7Bd7BA684a52aB1bdd8Cb38944) |
+| 421614   | MSender.sol         | [0x4FE537F6eFe5C63d451e0C7F3540650005CEAe7A](https://sepolia.arbiscan.io/address/0x4FE537F6eFe5C63d451e0C7F3540650005CEAe7A) |
+| 421614   | MReciever.sol       | [0x99bd0287877a957077Fcf2221512ce72aAC360Ba](https://sepolia.arbiscan.io/address/0x99bd0287877a957077fcf2221512ce72aac360ba) |        
+| 421614   | Margari.sol         | [0x4e14C6f0D3E9a7327e48e397C20b2B5a15528ab4](https://sepolia.arbiscan.io/address/0x4e14C6f0D3E9a7327e48e397C20b2B5a15528ab4) |
+| 421614   | MargariStrategy.sol | [0xc7E47139e0f4A90f10ce402a790B6ED0b5ce3aBd]() |
+| 421614   | MProjectFactory.sol | [0x0E826F2B23f9200e9a34D3d15E7BD902cffCC600]() |
+| 421614   | MargariTestToken.sol| [0x5107984C96297564eE9aDC5c77e986B41c9aD25C]() |
+| 421614   | MProjectCreator.sol | []()                                           |
+|          |                     |                                                |
+
 |*Sepolia* |   (Testnet)         |                                            |
 | 11155111 | MRegister.sol       | 0x261f61460c2Ca01284f1Df3664985ec9322a867B |
-| 11155111 | GVaultFactory.sol   | 0xC0f1b3B9E7316d021193163e597452225748ac6F |
-| 11155111 | GiltContract.sol    | 0x79193FF8b91E3f08a5731c28FEC74190390DeF61 |
+| 11155111 | GVaultFactory.sol   | 0xeCc1223fcE6cE6A5eeC9ea84Af16aC15cc7b1855 |
+| 11155111 | GiltContract.sol    | 0x2892FFbF7ad1985cB8176BEd59d8378EF8a1225D |
 | 11155111 | MSender.sol         | 0x536936c3d3e38eC6A97585c31F5063b770Cf2EAd |
 | 11155111 | MReciever.sol       | 0x9b8E907b2e91e8E2bDcCF30505fF7d508C190544 |        
 | 11155111 | Margari.sol         | 0x16B0975dc8B4eaDB28F2a776C8BcE499875E3Bb8 |
+| 11155111 | MargariTestToken.sol| 0x1C5A3cDd6E29D15a170fb74AB1ea257c6993bEe1 |

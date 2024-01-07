@@ -1,0 +1,104 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_alloProfileId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_alloPoolId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_budget",
+						"type": "uint256"
+					}
+				],
+				"name": "createProject",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_project",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_alloPoolId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "getProject",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_project",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/interfaces/IMProjectFactory.sol": "IMProjectFactory"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interfaces/IMProjectFactory.sol": {
+			"keccak256": "0x083bbf6621def2e3b4ce9c58df0cd31c59cfb929ff6d25ff7424c87ecb6a455b",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://2057b78306803367bd6ccb62f52866153b7be6283ed4072e0e272ec7670f8520",
+				"dweb:/ipfs/QmRQgrWaoeYyyvZnKj92Q6ZRPmhpqJWPDfuCbzaXDvGo1f"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getName",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVersion",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_version",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/interfaces/IMVersion.sol": "IMVersion"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interfaces/IMVersion.sol": {
+			"keccak256": "0x313fc3f323f506bf67d81eae3962374edc282ea508cd2e6a0db7b09846e8e2bd",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://52208146c43535fac38a262eb7c808e3b25ef20432f9a945b24f1c9ad8c9ceea",
+				"dweb:/ipfs/QmTbjtZSJDUhQnPVSigpii2GsbxqdPD1iWQ9f6vhbtqFN9"
+			]
+		}
+	},
+	"version": 1
+}

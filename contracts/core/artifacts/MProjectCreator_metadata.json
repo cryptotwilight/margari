@@ -1,0 +1,369 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_register",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_profileId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "_profileName",
+						"type": "string"
+					}
+				],
+				"name": "addExternalProfile",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "_added",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_orgName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_metadataIpfsHash",
+						"type": "string"
+					},
+					{
+						"internalType": "address[]",
+						"name": "_adminAddresses",
+						"type": "address[]"
+					}
+				],
+				"name": "createFunderOrgProfile",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_profileId",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_orgName",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_poolSize",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_initialFundingAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_metadataIpfsHash",
+						"type": "string"
+					},
+					{
+						"internalType": "address[]",
+						"name": "_poolAdmins",
+						"type": "address[]"
+					}
+				],
+				"name": "createFundingPool",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_poolId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_orgName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_alloPoolId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_projectName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_budget",
+						"type": "uint256"
+					}
+				],
+				"name": "createProject",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_project",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getName",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getOrgs",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "_orgs",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_orgName",
+						"type": "string"
+					}
+				],
+				"name": "getPoolIdsByOrgName",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "_poolIds",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_orgName",
+						"type": "string"
+					}
+				],
+				"name": "getProfileId",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_profileId",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_orgName",
+						"type": "string"
+					}
+				],
+				"name": "getProjectsByOrgName",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "_projects",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVersion",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_version",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "notifyChangeOfAddress",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "_acknowledged",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/core/MProjectCreator.sol": "MProjectCreator"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0xc6a8ff0ea489379b61faa647490411b80102578440ab9d84e9a957cc12164e70",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0ea104e577e63faea3b69c415637e99e755dcbf64c5833d7140c35a714d6d90c",
+				"dweb:/ipfs/Qmau6x4Ns9XdyynRCNNp3RhLqijJjFm7z5fyZazfYFGYdq"
+			]
+		},
+		"contracts/core/MProjectCreator.sol": {
+			"keccak256": "0xe5d6eb89a74650938eb4ca60aafd8037de079b83dc1a0d84afd975487acd1070",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://e3df7d7ea33083ab7711140f2bda60a94cccee5974a621fe35a8d78ba4de56b5",
+				"dweb:/ipfs/QmbSi1w41igvPzWgoK2BPBmhB88z9RSfgUeXGaezaLVFrf"
+			]
+		},
+		"contracts/interfaces/IMProjectFactory.sol": {
+			"keccak256": "0x083bbf6621def2e3b4ce9c58df0cd31c59cfb929ff6d25ff7424c87ecb6a455b",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://2057b78306803367bd6ccb62f52866153b7be6283ed4072e0e272ec7670f8520",
+				"dweb:/ipfs/QmRQgrWaoeYyyvZnKj92Q6ZRPmhpqJWPDfuCbzaXDvGo1f"
+			]
+		},
+		"contracts/interfaces/IMRegister.sol": {
+			"keccak256": "0xb2364f73159afc2d717b844ba80a4af54d36c0b3142c7cd540c939f595803714",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://a4ee87280b6bff80c38fead8a4b32f2851e2db85f88ef4fa8875c31b35a76df9",
+				"dweb:/ipfs/QmbgtNAAMUp73yrtPJHvaCtz5XDRDUL9zmbijy3tK4x5rP"
+			]
+		},
+		"contracts/interfaces/IMStructs.sol": {
+			"keccak256": "0x6aab2b60204ec059c66fd8dd0d9324b01d45ef2243eb827abdd538caf758e51d",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://89355a76386c051d95338ebe189cac9d8b76d24980a5c31d25360ff744954f54",
+				"dweb:/ipfs/QmbtvWefb3V4sZ7bp99hT5PwR2zaEGiCktQrwVyrbHYpEY"
+			]
+		},
+		"contracts/interfaces/IMVersion.sol": {
+			"keccak256": "0x313fc3f323f506bf67d81eae3962374edc282ea508cd2e6a0db7b09846e8e2bd",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://52208146c43535fac38a262eb7c808e3b25ef20432f9a945b24f1c9ad8c9ceea",
+				"dweb:/ipfs/QmTbjtZSJDUhQnPVSigpii2GsbxqdPD1iWQ9f6vhbtqFN9"
+			]
+		},
+		"https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/interfaces/IAllo.sol": {
+			"keccak256": "0xe1ccd35e03787b4a5beb138c336f5fc617f4885726bfdf3c82a642499e21f785",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://7369418f7c7a3a16c38ed506ceb4e873f0806e6d68db2f682fa46b0e6070a74a",
+				"dweb:/ipfs/Qmc4MiHqKdPdd7H7me8h5LsjHMt7KgAdUg5phGUTHMVsdc"
+			]
+		},
+		"https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/interfaces/IRegistry.sol": {
+			"keccak256": "0x3a2edcea094551fc86612932d42bd6b4682d20fb7b46cfdbeee39ba85367749f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c922d497fdfdd2f43a009959429c761d1fb61501ca5d91abf9ae873ac58d437e",
+				"dweb:/ipfs/QmaiUx4uVajytmFJQJdGh2mJK2RKn4xNVrARurJdF3iwzA"
+			]
+		},
+		"https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/interfaces/IStrategy.sol": {
+			"keccak256": "0xebd143a6729d7fe650ffd83a2dc1941e19ce9285526e5cb4d6c32adba3f3cf23",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://994ed7ab48860e92ffd369e6741149760a725c5ddf4fc55e33c31f408bd25487",
+				"dweb:/ipfs/QmV6bzxJQo5T13Kynv7mqGJQSbNyZ4ZJfTEjWUymxmpfpH"
+			]
+		},
+		"https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/libraries/Metadata.sol": {
+			"keccak256": "0xbc720e2a180c77a3d3faebe8364c633203ff16b007fadfa19a4a11d743a5ee90",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://8e84afc7482ef1f7bd004642a58540230ab8eabc8d471e93990fd0d6230b7177",
+				"dweb:/ipfs/QmfFdYuuwkDXKQ95LYXVVALedrg2HLPZNd4Kx8gNdtDYwj"
+			]
+		}
+	},
+	"version": 1
+}

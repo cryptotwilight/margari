@@ -1,0 +1,58 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "EVM_EXTRA_ARGS_V1_TAG",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/core/MReciever_flattened.sol": "Client"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/core/MReciever_flattened.sol": {
+			"keccak256": "0x0eb413caa82d15f435dbb869bf0bfc20115976c408a63f505961551cd7b44813",
+			"urls": [
+				"bzz-raw://186d2b56970c2b784e74979638c7c3b575e64e59ab13f8567702273b7cd680af",
+				"dweb:/ipfs/QmWp6P17detdt6cxfmm98jQsUz3N83w3q5dA2aDFCW8jcm"
+			]
+		}
+	},
+	"version": 1
+}

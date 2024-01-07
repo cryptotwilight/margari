@@ -1,0 +1,868 @@
+{
+	"id": "16c3b9bf0bdace0412223ae4cccc15a8",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.23",
+	"solcLongVersion": "0.8.23+commit.f704f362",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/interfaces/IMReciever.sol": {
+				"content": "// SPDX-License-Identifier: APACHE 2.0\r\npragma solidity ^0.8.23;\r\n\r\nimport {Gilt, GiltClaim} from \"./IMStructs.sol\";\r\n\r\ninterface IMReciever {\r\n\r\n    function claimGilts(address _claimant) external returns (GiltClaim [] memory giltClaims);\r\n\r\n}"
+			},
+			"contracts/interfaces/IMStructs.sol": {
+				"content": "// SPDX-License-Identifier: APACHE 2.0\r\npragma solidity ^0.8.23;\r\n\r\n\r\nstruct Gilt {\r\n    address erc20; \r\n    uint256 amount; \r\n    uint256 creationDate; \r\n    uint256 chainId; \r\n    address giltContract; \r\n    uint256 id; \r\n}\r\n\r\nstruct TransmittedGilt { \r\n    Gilt gilt; \r\n    bytes32 projectId;\r\n    address owner; \r\n}\r\n\r\nstruct GiltClaim { \r\n    bytes32 projectId; \r\n    uint256 giltId; \r\n    uint256 chainId; \r\n}\r\n\r\nstruct DestinationConfig {\r\n    uint256 chainId; \r\n    uint256 ccipChainSelector; \r\n    address routerAddress; \r\n    address [] feeTokens; \r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/interfaces/IMReciever.sol": {
+				"IMReciever": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "_claimant",
+									"type": "address"
+								}
+							],
+							"name": "claimGilts",
+							"outputs": [
+								{
+									"components": [
+										{
+											"internalType": "bytes32",
+											"name": "projectId",
+											"type": "bytes32"
+										},
+										{
+											"internalType": "uint256",
+											"name": "giltId",
+											"type": "uint256"
+										},
+										{
+											"internalType": "uint256",
+											"name": "chainId",
+											"type": "uint256"
+										}
+									],
+									"internalType": "struct GiltClaim[]",
+									"name": "giltClaims",
+									"type": "tuple[]"
+								}
+							],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"claimGilts(address)": "72d02aea"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_claimant\",\"type\":\"address\"}],\"name\":\"claimGilts\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"projectId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"giltId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"chainId\",\"type\":\"uint256\"}],\"internalType\":\"struct GiltClaim[]\",\"name\":\"giltClaims\",\"type\":\"tuple[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IMReciever.sol\":\"IMReciever\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/interfaces/IMReciever.sol\":{\"keccak256\":\"0xf4526eee2e8cb2a263df041ae404752a09e94f857fe0696b0cdf853435405e8f\",\"license\":\"APACHE 2.0\",\"urls\":[\"bzz-raw://741a827d1944cb305e46899443f143c6108feff2cc311af5e0dc5e11907f1775\",\"dweb:/ipfs/QmTgEVc1jcQec4Yy7kxpfCXxQigBrRdRrTa6crJ8Yo6mjK\"]},\"contracts/interfaces/IMStructs.sol\":{\"keccak256\":\"0x300b643c5e6db4d92cfad6b816121061ffb122c54b44ddce7247a521f0c5a6cd\",\"license\":\"APACHE 2.0\",\"urls\":[\"bzz-raw://19a4dcd4f6b1baf167f48eb6501d1735721dab177de4f89742504055886ce901\",\"dweb:/ipfs/QmbbNyPeMGeXAsi3zH9NKGSHoomvcpzx981zgfwoyShLPQ\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/interfaces/IMReciever.sol": {
+				"ast": {
+					"absolutePath": "contracts/interfaces/IMReciever.sol",
+					"exportedSymbols": {
+						"Gilt": [
+							29
+						],
+						"GiltClaim": [
+							44
+						],
+						"IMReciever": [
+							14
+						]
+					},
+					"id": 15,
+					"license": "APACHE 2.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".23"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "40:24:0"
+						},
+						{
+							"absolutePath": "contracts/interfaces/IMStructs.sol",
+							"file": "./IMStructs.sol",
+							"id": 4,
+							"nameLocation": "-1:-1:-1",
+							"nodeType": "ImportDirective",
+							"scope": 15,
+							"sourceUnit": 55,
+							"src": "68:48:0",
+							"symbolAliases": [
+								{
+									"foreign": {
+										"id": 2,
+										"name": "Gilt",
+										"nodeType": "Identifier",
+										"overloadedDeclarations": [],
+										"referencedDeclaration": 29,
+										"src": "76:4:0",
+										"typeDescriptions": {}
+									},
+									"nameLocation": "-1:-1:-1"
+								},
+								{
+									"foreign": {
+										"id": 3,
+										"name": "GiltClaim",
+										"nodeType": "Identifier",
+										"overloadedDeclarations": [],
+										"referencedDeclaration": 44,
+										"src": "82:9:0",
+										"typeDescriptions": {}
+									},
+									"nameLocation": "-1:-1:-1"
+								}
+							],
+							"unitAlias": ""
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "IMReciever",
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"fullyImplemented": false,
+							"id": 14,
+							"linearizedBaseContracts": [
+								14
+							],
+							"name": "IMReciever",
+							"nameLocation": "130:10:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"functionSelector": "72d02aea",
+									"id": 13,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "claimGilts",
+									"nameLocation": "159:10:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 7,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 6,
+												"mutability": "mutable",
+												"name": "_claimant",
+												"nameLocation": "178:9:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 13,
+												"src": "170:17:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 5,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "170:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "169:19:0"
+									},
+									"returnParameters": {
+										"id": 12,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 11,
+												"mutability": "mutable",
+												"name": "giltClaims",
+												"nameLocation": "227:10:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 13,
+												"src": "207:30:0",
+												"stateVariable": false,
+												"storageLocation": "memory",
+												"typeDescriptions": {
+													"typeIdentifier": "t_array$_t_struct$_GiltClaim_$44_memory_ptr_$dyn_memory_ptr",
+													"typeString": "struct GiltClaim[]"
+												},
+												"typeName": {
+													"baseType": {
+														"id": 9,
+														"nodeType": "UserDefinedTypeName",
+														"pathNode": {
+															"id": 8,
+															"name": "GiltClaim",
+															"nameLocations": [
+																"207:9:0"
+															],
+															"nodeType": "IdentifierPath",
+															"referencedDeclaration": 44,
+															"src": "207:9:0"
+														},
+														"referencedDeclaration": 44,
+														"src": "207:9:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_struct$_GiltClaim_$44_storage_ptr",
+															"typeString": "struct GiltClaim"
+														}
+													},
+													"id": 10,
+													"nodeType": "ArrayTypeName",
+													"src": "207:12:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_array$_t_struct$_GiltClaim_$44_storage_$dyn_storage_ptr",
+														"typeString": "struct GiltClaim[]"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "206:32:0"
+									},
+									"scope": 14,
+									"src": "150:89:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								}
+							],
+							"scope": 15,
+							"src": "120:124:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "40:204:0"
+				},
+				"id": 0
+			},
+			"contracts/interfaces/IMStructs.sol": {
+				"ast": {
+					"absolutePath": "contracts/interfaces/IMStructs.sol",
+					"exportedSymbols": {
+						"DestinationConfig": [
+							54
+						],
+						"Gilt": [
+							29
+						],
+						"GiltClaim": [
+							44
+						],
+						"TransmittedGilt": [
+							37
+						]
+					},
+					"id": 55,
+					"license": "APACHE 2.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 16,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".23"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "40:24:1"
+						},
+						{
+							"canonicalName": "Gilt",
+							"id": 29,
+							"members": [
+								{
+									"constant": false,
+									"id": 18,
+									"mutability": "mutable",
+									"name": "erc20",
+									"nameLocation": "97:5:1",
+									"nodeType": "VariableDeclaration",
+									"scope": 29,
+									"src": "89:13:1",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_address",
+										"typeString": "address"
+									},
+									"typeName": {
+										"id": 17,
+										"name": "address",
+										"nodeType": "ElementaryTypeName",
+										"src": "89:7:1",
+										"stateMutability": "nonpayable",
+										"typeDescriptions": {
+											"typeIdentifier": "t_address",
+											"typeString": "address"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 20,
+									"mutability": "mutable",
+									"name": "amount",
+									"nameLocation": "118:6:1",
+									"nodeType": "VariableDeclaration",
+									"scope": 29,
+									"src": "110:14:1",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint256",
+										"typeString": "uint256"
+									},
+									"typeName": {
+										"id": 19,
+										"name": "uint256",
+										"nodeType": "ElementaryTypeName",
+										"src": "110:7:1",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint256",
+											"typeString": "uint256"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 22,
+									"mutability": "mutable",
+									"name": "creationDate",
+									"nameLocation": "140:12:1",
+									"nodeType": "VariableDeclaration",
+									"scope": 29,
+									"src": "132:20:1",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint256",
+										"typeString": "uint256"
+									},
+									"typeName": {
+										"id": 21,
+										"name": "uint256",
+										"nodeType": "ElementaryTypeName",
+										"src": "132:7:1",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint256",
+											"typeString": "uint256"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 24,
+									"mutability": "mutable",
+									"name": "chainId",
+									"nameLocation": "168:7:1",
+									"nodeType": "VariableDeclaration",
+									"scope": 29,
+									"src": "160:15:1",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint256",
+										"typeString": "uint256"
+									},
+									"typeName": {
+										"id": 23,
+										"name": "uint256",
+										"nodeType": "ElementaryTypeName",
+										"src": "160:7:1",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint256",
+											"typeString": "uint256"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 26,
+									"mutability": "mutable",
+									"name": "giltContract",
+									"nameLocation": "191:12:1",
+									"nodeType": "VariableDeclaration",
+									"scope": 29,
+									"src": "183:20:1",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_address",
+										"typeString": "address"
+									},
+									"typeName": {
+										"id": 25,
+										"name": "address",
+										"nodeType": "ElementaryTypeName",
+										"src": "183:7:1",
+										"stateMutability": "nonpayable",
+										"typeDescriptions": {
+											"typeIdentifier": "t_address",
+											"typeString": "address"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 28,
+									"mutability": "mutable",
+									"name": "id",
+									"nameLocation": "219:2:1",
+									"nodeType": "VariableDeclaration",
+									"scope": 29,
+									"src": "211:10:1",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint256",
+										"typeString": "uint256"
+									},
+									"typeName": {
+										"id": 27,
+										"name": "uint256",
+										"nodeType": "ElementaryTypeName",
+										"src": "211:7:1",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint256",
+											"typeString": "uint256"
+										}
+									},
+									"visibility": "internal"
+								}
+							],
+							"name": "Gilt",
+							"nameLocation": "77:4:1",
+							"nodeType": "StructDefinition",
+							"scope": 55,
+							"src": "70:156:1",
+							"visibility": "public"
+						},
+						{
+							"canonicalName": "TransmittedGilt",
+							"id": 37,
+							"members": [
+								{
+									"constant": false,
+									"id": 32,
+									"mutability": "mutable",
+									"name": "gilt",
+									"nameLocation": "266:4:1",
+									"nodeType": "VariableDeclaration",
+									"scope": 37,
+									"src": "261:9:1",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_struct$_Gilt_$29_storage_ptr",
+										"typeString": "struct Gilt"
+									},
+									"typeName": {
+										"id": 31,
+										"nodeType": "UserDefinedTypeName",
+										"pathNode": {
+											"id": 30,
+											"name": "Gilt",
+											"nameLocations": [
+												"261:4:1"
+											],
+											"nodeType": "IdentifierPath",
+											"referencedDeclaration": 29,
+											"src": "261:4:1"
+										},
+										"referencedDeclaration": 29,
+										"src": "261:4:1",
+										"typeDescriptions": {
+											"typeIdentifier": "t_struct$_Gilt_$29_storage_ptr",
+											"typeString": "struct Gilt"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 34,
+									"mutability": "mutable",
+									"name": "projectId",
+									"nameLocation": "286:9:1",
+									"nodeType": "VariableDeclaration",
+									"scope": 37,
+									"src": "278:17:1",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_bytes32",
+										"typeString": "bytes32"
+									},
+									"typeName": {
+										"id": 33,
+										"name": "bytes32",
+										"nodeType": "ElementaryTypeName",
+										"src": "278:7:1",
+										"typeDescriptions": {
+											"typeIdentifier": "t_bytes32",
+											"typeString": "bytes32"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 36,
+									"mutability": "mutable",
+									"name": "owner",
+									"nameLocation": "310:5:1",
+									"nodeType": "VariableDeclaration",
+									"scope": 37,
+									"src": "302:13:1",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_address",
+										"typeString": "address"
+									},
+									"typeName": {
+										"id": 35,
+										"name": "address",
+										"nodeType": "ElementaryTypeName",
+										"src": "302:7:1",
+										"stateMutability": "nonpayable",
+										"typeDescriptions": {
+											"typeIdentifier": "t_address",
+											"typeString": "address"
+										}
+									},
+									"visibility": "internal"
+								}
+							],
+							"name": "TransmittedGilt",
+							"nameLocation": "237:15:1",
+							"nodeType": "StructDefinition",
+							"scope": 55,
+							"src": "230:90:1",
+							"visibility": "public"
+						},
+						{
+							"canonicalName": "GiltClaim",
+							"id": 44,
+							"members": [
+								{
+									"constant": false,
+									"id": 39,
+									"mutability": "mutable",
+									"name": "projectId",
+									"nameLocation": "357:9:1",
+									"nodeType": "VariableDeclaration",
+									"scope": 44,
+									"src": "349:17:1",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_bytes32",
+										"typeString": "bytes32"
+									},
+									"typeName": {
+										"id": 38,
+										"name": "bytes32",
+										"nodeType": "ElementaryTypeName",
+										"src": "349:7:1",
+										"typeDescriptions": {
+											"typeIdentifier": "t_bytes32",
+											"typeString": "bytes32"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 41,
+									"mutability": "mutable",
+									"name": "giltId",
+									"nameLocation": "382:6:1",
+									"nodeType": "VariableDeclaration",
+									"scope": 44,
+									"src": "374:14:1",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint256",
+										"typeString": "uint256"
+									},
+									"typeName": {
+										"id": 40,
+										"name": "uint256",
+										"nodeType": "ElementaryTypeName",
+										"src": "374:7:1",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint256",
+											"typeString": "uint256"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 43,
+									"mutability": "mutable",
+									"name": "chainId",
+									"nameLocation": "404:7:1",
+									"nodeType": "VariableDeclaration",
+									"scope": 44,
+									"src": "396:15:1",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint256",
+										"typeString": "uint256"
+									},
+									"typeName": {
+										"id": 42,
+										"name": "uint256",
+										"nodeType": "ElementaryTypeName",
+										"src": "396:7:1",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint256",
+											"typeString": "uint256"
+										}
+									},
+									"visibility": "internal"
+								}
+							],
+							"name": "GiltClaim",
+							"nameLocation": "331:9:1",
+							"nodeType": "StructDefinition",
+							"scope": 55,
+							"src": "324:92:1",
+							"visibility": "public"
+						},
+						{
+							"canonicalName": "DestinationConfig",
+							"id": 54,
+							"members": [
+								{
+									"constant": false,
+									"id": 46,
+									"mutability": "mutable",
+									"name": "chainId",
+									"nameLocation": "460:7:1",
+									"nodeType": "VariableDeclaration",
+									"scope": 54,
+									"src": "452:15:1",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint256",
+										"typeString": "uint256"
+									},
+									"typeName": {
+										"id": 45,
+										"name": "uint256",
+										"nodeType": "ElementaryTypeName",
+										"src": "452:7:1",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint256",
+											"typeString": "uint256"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 48,
+									"mutability": "mutable",
+									"name": "ccipChainSelector",
+									"nameLocation": "483:17:1",
+									"nodeType": "VariableDeclaration",
+									"scope": 54,
+									"src": "475:25:1",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint256",
+										"typeString": "uint256"
+									},
+									"typeName": {
+										"id": 47,
+										"name": "uint256",
+										"nodeType": "ElementaryTypeName",
+										"src": "475:7:1",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint256",
+											"typeString": "uint256"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 50,
+									"mutability": "mutable",
+									"name": "routerAddress",
+									"nameLocation": "516:13:1",
+									"nodeType": "VariableDeclaration",
+									"scope": 54,
+									"src": "508:21:1",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_address",
+										"typeString": "address"
+									},
+									"typeName": {
+										"id": 49,
+										"name": "address",
+										"nodeType": "ElementaryTypeName",
+										"src": "508:7:1",
+										"stateMutability": "nonpayable",
+										"typeDescriptions": {
+											"typeIdentifier": "t_address",
+											"typeString": "address"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 53,
+									"mutability": "mutable",
+									"name": "feeTokens",
+									"nameLocation": "548:9:1",
+									"nodeType": "VariableDeclaration",
+									"scope": 54,
+									"src": "537:20:1",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+										"typeString": "address[]"
+									},
+									"typeName": {
+										"baseType": {
+											"id": 51,
+											"name": "address",
+											"nodeType": "ElementaryTypeName",
+											"src": "537:7:1",
+											"stateMutability": "nonpayable",
+											"typeDescriptions": {
+												"typeIdentifier": "t_address",
+												"typeString": "address"
+											}
+										},
+										"id": 52,
+										"nodeType": "ArrayTypeName",
+										"src": "537:10:1",
+										"typeDescriptions": {
+											"typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+											"typeString": "address[]"
+										}
+									},
+									"visibility": "internal"
+								}
+							],
+							"name": "DestinationConfig",
+							"nameLocation": "427:17:1",
+							"nodeType": "StructDefinition",
+							"scope": 55,
+							"src": "420:142:1",
+							"visibility": "public"
+						}
+					],
+					"src": "40:522:1"
+				},
+				"id": 1
+			}
+		}
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_claimant",
+						"type": "address"
+					}
+				],
+				"name": "claimGilts",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes32",
+								"name": "projectId",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "uint256",
+								"name": "giltId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "chainId",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct GiltClaim[]",
+						"name": "giltClaims",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/interfaces/IMReciever.sol": "IMReciever"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interfaces/IMReciever.sol": {
+			"keccak256": "0xf4526eee2e8cb2a263df041ae404752a09e94f857fe0696b0cdf853435405e8f",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://741a827d1944cb305e46899443f143c6108feff2cc311af5e0dc5e11907f1775",
+				"dweb:/ipfs/QmTgEVc1jcQec4Yy7kxpfCXxQigBrRdRrTa6crJ8Yo6mjK"
+			]
+		},
+		"contracts/interfaces/IMStructs.sol": {
+			"keccak256": "0x300b643c5e6db4d92cfad6b816121061ffb122c54b44ddce7247a521f0c5a6cd",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://19a4dcd4f6b1baf167f48eb6501d1735721dab177de4f89742504055886ce901",
+				"dweb:/ipfs/QmbbNyPeMGeXAsi3zH9NKGSHoomvcpzx981zgfwoyShLPQ"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,206 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_sendId",
+						"type": "uint256"
+					}
+				],
+				"name": "getTransmittedGilt",
+				"outputs": [
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "address",
+										"name": "erc20",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "amount",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "creationDate",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "chainId",
+										"type": "uint256"
+									},
+									{
+										"internalType": "address",
+										"name": "giltContract",
+										"type": "address"
+									},
+									{
+										"internalType": "uint256",
+										"name": "id",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct Gilt",
+								"name": "gilt",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "alloProfileId",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "uint256",
+								"name": "projectId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							}
+						],
+						"internalType": "struct TransmittedGilt",
+						"name": "_gilt",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_destinationChainId",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "erc20",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "creationDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "chainId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "giltContract",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Gilt",
+						"name": "_gilt",
+						"type": "tuple"
+					},
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "_alloProfileId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_projectId",
+						"type": "uint256"
+					}
+				],
+				"name": "sendGilt",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_sendId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/interfaces/IMSender.sol": "IMSender"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interfaces/IMSender.sol": {
+			"keccak256": "0x295d86a5d9cd748e6f0d4b548699756eaa5f1ad463a7ee7e743e84bc3388776e",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://62974daf9b553fa1c6fc253fadb9eab0fa687a635c276f2da702ecdd81afd9e6",
+				"dweb:/ipfs/QmeJJYWcyspifRpFfTJBww4bqw5GWiL4JLob4uuirYgnMo"
+			]
+		},
+		"contracts/interfaces/IMStructs.sol": {
+			"keccak256": "0x6aab2b60204ec059c66fd8dd0d9324b01d45ef2243eb827abdd538caf758e51d",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://89355a76386c051d95338ebe189cac9d8b76d24980a5c31d25360ff744954f54",
+				"dweb:/ipfs/QmbtvWefb3V4sZ7bp99hT5PwR2zaEGiCktQrwVyrbHYpEY"
+			]
+		},
+		"https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/libraries/Metadata.sol": {
+			"keccak256": "0xa9d5f76a4479452c645237db928915336b2abee76ee1d1aa0396b290b0f27049",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://548bfcd47647aab361af0eacc3cf7ac7508db2241e4e12cd258ba94d7d01f54f",
+				"dweb:/ipfs/QmVfPzjjWaH99Ryo8bQnRpzSsR1t1RbCeb6BDg59JZTEDb"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,261 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_registry",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_alloProfileId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_alloPoolId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_budget",
+						"type": "uint256"
+					}
+				],
+				"name": "createProject",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_project",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getName",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_poolId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "getProject",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_project",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getProjects",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "_projects",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVersion",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_version",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_project",
+						"type": "address"
+					}
+				],
+				"name": "isKnownProject",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "_isKnown",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/core/ProjectFactory.sol": "ProjectFactory"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0xc6a8ff0ea489379b61faa647490411b80102578440ab9d84e9a957cc12164e70",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0ea104e577e63faea3b69c415637e99e755dcbf64c5833d7140c35a714d6d90c",
+				"dweb:/ipfs/Qmau6x4Ns9XdyynRCNNp3RhLqijJjFm7z5fyZazfYFGYdq"
+			]
+		},
+		"contracts/core/MProject.sol": {
+			"keccak256": "0x1bf7966056256218684f8d9b386eed692e86f996e97e77d8c4672871fc231dc1",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://2878dde1fc22e7ce8113b545bdb57ca11db9c17173325153102114351891ed28",
+				"dweb:/ipfs/QmeYoUPh2jW2itHaiXy36uHsVmFKwRna9N7ViAaLcHnBrz"
+			]
+		},
+		"contracts/core/ProjectFactory.sol": {
+			"keccak256": "0x2ce2e5e7d8483ba478c7b518fdae96b6c418482733005cab7e8f7a33552fb317",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://2b5a51988d0717ac0ce440530da3d98468139fadfa55ee740ef96a6b0db899cd",
+				"dweb:/ipfs/QmQzhRH1RvDiQUeXEtnVYDf1YGL92fTvc5YwSPDstmXKqm"
+			]
+		},
+		"contracts/interfaces/IMProject.sol": {
+			"keccak256": "0xcdb6c282023b61d7d517262405bece16512fef6761686323819e1ff83f0f417a",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://84d68959cfa5bdee89c2d2718d3a04683b7cb722be37700028a3e8c6a4a6727f",
+				"dweb:/ipfs/QmNeSawG529AypTfZ88HEH3YTtPL9e494j7RB5EwuQUYDq"
+			]
+		},
+		"contracts/interfaces/IMProjectFactory.sol": {
+			"keccak256": "0x083bbf6621def2e3b4ce9c58df0cd31c59cfb929ff6d25ff7424c87ecb6a455b",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://2057b78306803367bd6ccb62f52866153b7be6283ed4072e0e272ec7670f8520",
+				"dweb:/ipfs/QmRQgrWaoeYyyvZnKj92Q6ZRPmhpqJWPDfuCbzaXDvGo1f"
+			]
+		},
+		"contracts/interfaces/IMRegister.sol": {
+			"keccak256": "0xb2364f73159afc2d717b844ba80a4af54d36c0b3142c7cd540c939f595803714",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://a4ee87280b6bff80c38fead8a4b32f2851e2db85f88ef4fa8875c31b35a76df9",
+				"dweb:/ipfs/QmbgtNAAMUp73yrtPJHvaCtz5XDRDUL9zmbijy3tK4x5rP"
+			]
+		},
+		"contracts/interfaces/IMStructs.sol": {
+			"keccak256": "0x6aab2b60204ec059c66fd8dd0d9324b01d45ef2243eb827abdd538caf758e51d",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://89355a76386c051d95338ebe189cac9d8b76d24980a5c31d25360ff744954f54",
+				"dweb:/ipfs/QmbtvWefb3V4sZ7bp99hT5PwR2zaEGiCktQrwVyrbHYpEY"
+			]
+		},
+		"contracts/interfaces/IMVersion.sol": {
+			"keccak256": "0x313fc3f323f506bf67d81eae3962374edc282ea508cd2e6a0db7b09846e8e2bd",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://52208146c43535fac38a262eb7c808e3b25ef20432f9a945b24f1c9ad8c9ceea",
+				"dweb:/ipfs/QmTbjtZSJDUhQnPVSigpii2GsbxqdPD1iWQ9f6vhbtqFN9"
+			]
+		},
+		"https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/interfaces/IAllo.sol": {
+			"keccak256": "0xe1ccd35e03787b4a5beb138c336f5fc617f4885726bfdf3c82a642499e21f785",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://7369418f7c7a3a16c38ed506ceb4e873f0806e6d68db2f682fa46b0e6070a74a",
+				"dweb:/ipfs/Qmc4MiHqKdPdd7H7me8h5LsjHMt7KgAdUg5phGUTHMVsdc"
+			]
+		},
+		"https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/interfaces/IRegistry.sol": {
+			"keccak256": "0x3a2edcea094551fc86612932d42bd6b4682d20fb7b46cfdbeee39ba85367749f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c922d497fdfdd2f43a009959429c761d1fb61501ca5d91abf9ae873ac58d437e",
+				"dweb:/ipfs/QmaiUx4uVajytmFJQJdGh2mJK2RKn4xNVrARurJdF3iwzA"
+			]
+		},
+		"https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/interfaces/IStrategy.sol": {
+			"keccak256": "0xebd143a6729d7fe650ffd83a2dc1941e19ce9285526e5cb4d6c32adba3f3cf23",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://994ed7ab48860e92ffd369e6741149760a725c5ddf4fc55e33c31f408bd25487",
+				"dweb:/ipfs/QmV6bzxJQo5T13Kynv7mqGJQSbNyZ4ZJfTEjWUymxmpfpH"
+			]
+		},
+		"https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/libraries/Metadata.sol": {
+			"keccak256": "0xbc720e2a180c77a3d3faebe8364c633203ff16b007fadfa19a4a11d743a5ee90",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://8e84afc7482ef1f7bd004642a58540230ab8eabc8d471e93990fd0d6230b7177",
+				"dweb:/ipfs/QmfFdYuuwkDXKQ95LYXVVALedrg2HLPZNd4Kx8gNdtDYwj"
+			]
+		}
+	},
+	"version": 1
+}

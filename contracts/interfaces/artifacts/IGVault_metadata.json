@@ -1,0 +1,172 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getAmountStored",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getErc20",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_erc20",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getGilt",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "erc20",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "creationDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "chainId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "giltContract",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Gilt",
+						"name": "_gilt",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isExpended",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "_isExpended",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "releaseFunds",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "_empty",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "storeFunds",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "_stored",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/interfaces/IGVault.sol": "IGVault"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interfaces/IGVault.sol": {
+			"keccak256": "0x58d67a75150782eee7f2ce4636db87e0274d1a95e3cc037e0d20abc0d552642b",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://607a1232737cbf36e0691dda597cd40f0c8096f3e92b7e825dcbd6000634a06f",
+				"dweb:/ipfs/QmddzyjLzFQmWWQSWXwemzzJ593CUT5c7HVsr14HbQZ6XF"
+			]
+		},
+		"contracts/interfaces/IMStructs.sol": {
+			"keccak256": "0x6aab2b60204ec059c66fd8dd0d9324b01d45ef2243eb827abdd538caf758e51d",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://89355a76386c051d95338ebe189cac9d8b76d24980a5c31d25360ff744954f54",
+				"dweb:/ipfs/QmbtvWefb3V4sZ7bp99hT5PwR2zaEGiCktQrwVyrbHYpEY"
+			]
+		},
+		"https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/libraries/Metadata.sol": {
+			"keccak256": "0xbc720e2a180c77a3d3faebe8364c633203ff16b007fadfa19a4a11d743a5ee90",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://8e84afc7482ef1f7bd004642a58540230ab8eabc8d471e93990fd0d6230b7177",
+				"dweb:/ipfs/QmfFdYuuwkDXKQ95LYXVVALedrg2HLPZNd4Kx8gNdtDYwj"
+			]
+		}
+	},
+	"version": 1
+}

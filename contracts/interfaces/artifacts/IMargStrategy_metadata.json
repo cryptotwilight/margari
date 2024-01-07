@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/interfaces/IMargariAlloStrategy.sol": "IMargStrategy"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interfaces/IMargariAlloStrategy.sol": {
+			"keccak256": "0xa6ffc047059308cb2013f91b991cdec17bd8ea4069504f39a59db4ec39ffec57",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://594ca127e8f8409c3664e324748d041b8b688e4bf9f97b90265533895ea31182",
+				"dweb:/ipfs/QmR3tPJar2MnTHzkY3SPRGH3k6zK7Ed6YRVyqCgtM9Pwvo"
+			]
+		}
+	},
+	"version": 1
+}

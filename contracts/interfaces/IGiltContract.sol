@@ -13,7 +13,7 @@ interface IGiltContract {
 
     function bondFunds(address _erc20, uint256 _amount) external payable returns (Gilt memory _gilt);
 
-    function unBondFunds(Gilt memory _gilt) external returns (address _erc20, uint256 _amount, address _to);
+    function unBondFunds(uint256 _giltId) external returns (address _erc20, uint256 _amount, address _to);
    
     // Transmitted Gilts are minted to the local Gilt Contract (they cannot be unbonded locally) 
     function mintLocalisedGilt(TransmittedGilt memory _tGilt, address _to) external returns (Gilt memory _gilt);

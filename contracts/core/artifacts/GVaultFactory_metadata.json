@@ -1,0 +1,230 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_register",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "erc20",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "creationDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "chainId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "giltContract",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Gilt",
+						"name": "_gilt",
+						"type": "tuple"
+					}
+				],
+				"name": "createVault",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_vault",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getName",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVaults",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "_vaults",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVersion",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_version",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_vault",
+						"type": "address"
+					}
+				],
+				"name": "isKnownVault",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "_isKnown",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/core/GVaultFactory.sol": "GVaultFactory"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0xc6a8ff0ea489379b61faa647490411b80102578440ab9d84e9a957cc12164e70",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0ea104e577e63faea3b69c415637e99e755dcbf64c5833d7140c35a714d6d90c",
+				"dweb:/ipfs/Qmau6x4Ns9XdyynRCNNp3RhLqijJjFm7z5fyZazfYFGYdq"
+			]
+		},
+		"contracts/core/GVault.sol": {
+			"keccak256": "0xbdee57072d8df6409e6ca592bcc544eaf09f322c68f13671aa54fb9824a58d9c",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://e31b5c3aac0253a50d21c9492a60d9c481ac63d0618d243a05bad2bb56a69f18",
+				"dweb:/ipfs/QmR4R2jPson5d7pKnEe9b2deDgiASBNDbSbsyycrco4EKU"
+			]
+		},
+		"contracts/core/GVaultFactory.sol": {
+			"keccak256": "0x7c09893171193be4bdc229dcc1d7cf4b9a7a18d52aad78af59a8b3831722e152",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://897061373fb090033e54995c5a761d73695661c9fdada49a9432685374433f6b",
+				"dweb:/ipfs/QmaFyfJ6QnJgTAK9tJVpdvMSFGNDJ1oYeuPz65xbGbdAYG"
+			]
+		},
+		"contracts/interfaces/IGVault.sol": {
+			"keccak256": "0x58d67a75150782eee7f2ce4636db87e0274d1a95e3cc037e0d20abc0d552642b",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://607a1232737cbf36e0691dda597cd40f0c8096f3e92b7e825dcbd6000634a06f",
+				"dweb:/ipfs/QmddzyjLzFQmWWQSWXwemzzJ593CUT5c7HVsr14HbQZ6XF"
+			]
+		},
+		"contracts/interfaces/IGVaultFactory.sol": {
+			"keccak256": "0xb87a06bece3e40c0ebc7bd1a677867709559d9cee31eed46658cc354a38977e6",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://08c09f13808bf96a0bf6196680c6247f10e085dfc140b72f6c412bf5581f2b09",
+				"dweb:/ipfs/QmcRu2Gv411ePg9zMKWicbNQR6qaQvGhcqC1QwLduttaPi"
+			]
+		},
+		"contracts/interfaces/IMRegister.sol": {
+			"keccak256": "0xb2364f73159afc2d717b844ba80a4af54d36c0b3142c7cd540c939f595803714",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://a4ee87280b6bff80c38fead8a4b32f2851e2db85f88ef4fa8875c31b35a76df9",
+				"dweb:/ipfs/QmbgtNAAMUp73yrtPJHvaCtz5XDRDUL9zmbijy3tK4x5rP"
+			]
+		},
+		"contracts/interfaces/IMStructs.sol": {
+			"keccak256": "0x6aab2b60204ec059c66fd8dd0d9324b01d45ef2243eb827abdd538caf758e51d",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://89355a76386c051d95338ebe189cac9d8b76d24980a5c31d25360ff744954f54",
+				"dweb:/ipfs/QmbtvWefb3V4sZ7bp99hT5PwR2zaEGiCktQrwVyrbHYpEY"
+			]
+		},
+		"contracts/interfaces/IMVersion.sol": {
+			"keccak256": "0x313fc3f323f506bf67d81eae3962374edc282ea508cd2e6a0db7b09846e8e2bd",
+			"license": "APACHE 2.0",
+			"urls": [
+				"bzz-raw://52208146c43535fac38a262eb7c808e3b25ef20432f9a945b24f1c9ad8c9ceea",
+				"dweb:/ipfs/QmTbjtZSJDUhQnPVSigpii2GsbxqdPD1iWQ9f6vhbtqFN9"
+			]
+		},
+		"https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/libraries/Metadata.sol": {
+			"keccak256": "0xbc720e2a180c77a3d3faebe8364c633203ff16b007fadfa19a4a11d743a5ee90",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://8e84afc7482ef1f7bd004642a58540230ab8eabc8d471e93990fd0d6230b7177",
+				"dweb:/ipfs/QmfFdYuuwkDXKQ95LYXVVALedrg2HLPZNd4Kx8gNdtDYwj"
+			]
+		}
+	},
+	"version": 1
+}

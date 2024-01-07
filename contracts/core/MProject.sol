@@ -8,7 +8,7 @@ import "../interfaces/IMVersion.sol";
 import {IAllo} from "https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/interfaces/IAllo.sol";
 import {IRegistry} from "https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/interfaces/IRegistry.sol";
 
-import {Project, Contributor, Deliverable, DeliverableStatus, PayoutStatus} from "../interfaces/IMStructs.sol";
+import {Project, Contributor, Deliverable, DeliverableStatus, PayoutStatus, PaymentDirective} from "../interfaces/IMStructs.sol";
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
@@ -30,10 +30,10 @@ contract MProject is IMProject, IMVersion {
     }
 
     string constant name = "PROJECT"; 
-    uint256 constant version = 1 ; 
+    uint256 constant version = 2; 
 
-    string constant ALLO_CA = "RESERVED_ALLO_PROTOCOL";
-    string constant PAYOUT_STRATEGY_CA = "RESERVED_PAYOUT_STRATEGY";
+    string constant ALLO_CA = "RESERVED_ALLO_CORE";
+    string constant PAYOUT_STRATEGY_CA = "RESERVED_M_A_DELIVERY_STRATEGY";
 
     uint256 immutable id; 
     string projectName; 
@@ -46,6 +46,7 @@ contract MProject is IMProject, IMVersion {
     
     uint256 [] contributorIds; 
     address [] contributorAddresses; 
+    uint256 [] paymentDirectiveIds; 
 
     mapping(address=>bool) isKnownContributorAddress; 
     mapping(uint256=>bool) isKnownContributor; 
@@ -87,14 +88,24 @@ contract MProject is IMProject, IMVersion {
                             projectId : id,
                             name  : name, 
                             alloPoolId : alloPoolId, 
-                            payoutCurrency : payoutErc20, 
+                            alloProfileId : alloProfileId,
+                            payoutCurrency : payoutErc20,
+                            budget : budget, 
                             deliverableIds : deliverableIds,  
                             contributors : contributorAddresses
                         }); 
     }
 
-    function getPayoutDirectives() view external returns (uint256 [] memory _directiveId, uint256 [] memory _chain, address [] memory _to, uint256 [] memory _amount) {
-        
+    function getPaymentDirectives() view external returns (PaymentDirective [] memory _paymentDirectives) {
+        _paymentDirectives = new PaymentDirective[](paymentDirectiveIds.length);
+        for(uint256 x = 0; x < _paymentDirectives.length; x++ ){
+            _paymentDirectives[x] = paymentDirectiveById[paymentDirectiveIds[x]];
+        }
+        return _paymentDirectives;
+    }
+
+    function getContributorIds() view external returns (uint256 [] memory _contributorIds) {
+        return contributorIds; 
     }
 
     function getContributorById(uint256 _contributorId ) view external returns (Contributor memory _contributor){
@@ -111,6 +122,7 @@ contract MProject is IMProject, IMVersion {
 
     function addContributor(Contributor memory _contributor) external returns (uint256 _contributorId) {
         uint256 contributorId_ = getIndex();
+        contributorIds.push(contributorId_);
         contributorById[contributorId_] = Contributor({
                                                         id : contributorId_,
                                                         homeChain : _contributor.homeChain,
@@ -146,22 +158,30 @@ contract MProject is IMProject, IMVersion {
         return deliverableIds.length;
     }
 
-
-
     function submitDeliverable(uint256 _deliverableId) external deliverableAssigneeOnly(_deliverableId) returns (bool _submitted) {
         require(isKnownDeliverable[_deliverableId], " unkknown deliverable ");
+        DeliverableStatus status_ = deliverableById[_deliverableId].deliverableStatus;
+        require( status_ != DeliverableStatus.CANCELLED || status_ != DeliverableStatus.SUSPENDED, "Deliverable suspended or cancelled" );
         deliverableById[_deliverableId].deliverableStatus = DeliverableStatus.DELIVERED; 
         deliverableById[_deliverableId].payoutStatus = PayoutStatus.PENDING; 
         uint256 paymentDirectiveId_ = getIndex(); 
-        paymentDirectiveById[paymentDirectiveId_] = PaymentDirective({});
-
+        paymentDirectiveById[paymentDirectiveId_] = PaymentDirective({
+                                                                        id : paymentDirectiveId_,
+                                                                        contributor : contributorById[contributorIdByDeliverableId[_deliverableId]],
+                                                                        projectId : id,
+                                                                        alloProfileId : alloProfileId, 
+                                                                        deliverableId : _deliverableId, 
+                                                                        amount : deliverableById[_deliverableId].payoutAmount,
+                                                                        erc20 : payoutErc20
+                                                                    });
+        paymentDirectiveIds.push(paymentDirectiveId_);
 
         return true; 
     }
 
-    function updatePayoutStatus(uint256 _deliverableId) external payoutStrategyOnly returns (bool _updated) {
+    function updatePayoutStatus(uint256 _deliverableId, PayoutStatus _status) external payoutStrategyOnly returns (bool _updated) {
         require(isKnownDeliverable[_deliverableId], " unkknown deliverable ");
-        deliverableById[_deliverableId].payoutStatus = PayoutStatus.PAID;
+        deliverableById[_deliverableId].payoutStatus = _status;
         return true; 
     }
 

@@ -23,9 +23,9 @@ contract ProjectFactory is IMProjectFactory, IMVersion {
     }
 
     string constant name = "RESERVED_PROJECT_FACTORY";
-    uint256 constant version = 1; 
+    uint256 constant version = 2; 
 
-    string constant ALLO_CA = "RESERVED_ALLO_PROTOCOL";
+    string constant ALLO_CA = "RESERVED_ALLO_CORE";
     string constant M_ADMIN_CA = "RESERVED_M_ADMIN";
 
     IMRegister register;
