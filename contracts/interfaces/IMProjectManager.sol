@@ -19,7 +19,7 @@ interface IMProjectManager {
 
     function createFunderOrgProfile(string memory _orgName, string memory _metadataIpfsHash, address [] memory _adminAddresses) external returns (bytes32 _profileId);
 
-    function importExternalProfile(bytes32 _profileId, string memory _profileName)  external returns (bool _added) ;
+    function importExternalProfile(bytes32 _profileId)  external returns (bool _added) ;
 
     function importExternalPool(bytes32 _profileId, uint256 _poolId) external returns (IAllo.Pool memory __pool);
 

@@ -22,17 +22,15 @@ contract MProjectManager is IMVersion, IMProjectManager {
     }
 
     string constant name = "MARGARI_PROJECT_MANAGER";
-    uint256 constant version  = 9; 
+    uint256 constant version  = 14; 
     
     string constant MARGARI_ALLO_STRATEGY_CA = "RESERVED_M_A_DELIVERY_STRATEGY";
     string constant ALLO_CA                  = "RESERVED_ALLO_CORE";
     string constant ALLO_PROFILE_REGISTER_CA = "RESERVED_ALLO_PROFILE_REGISTER";
     string constant PROJECT_FACTORY_CA       = "RESERVED_PROJECT_FACTORY";
-    string constant M_ADMIN_CA = "RESERVED_M_ADMIN";
-
+    string constant M_ADMIN_CA               = "RESERVED_M_ADMIN";
 
     address constant NATIVE = 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE;
-
 
     IMRegister register;
     IRegistry alloRegistry; 
@@ -53,7 +51,7 @@ contract MProjectManager is IMVersion, IMProjectManager {
     constructor(address _register) {
         register = IMRegister(_register);
         allo = IAllo(register.getAddress(ALLO_CA));
-        alloRegistry = IRegistry(allo.getRegistry()); 
+        alloRegistry = allo.getRegistry(); 
         projectFactory = IMProjectFactory(register.getAddress(PROJECT_FACTORY_CA));
         self = address(this);
     }
@@ -86,23 +84,33 @@ contract MProjectManager is IMVersion, IMProjectManager {
         require(!knownOrgName[_orgName], "org already created");
         knownOrgName[_orgName] = true; 
         orgNames.push(_orgName);
-        
+      /*  
         address [] memory withProjectCreator_ = new address[](_adminAddresses.length+1);
         withProjectCreator_[_adminAddresses.length] = self; // add project creator to profile admins
         for(uint x = 0; x < _adminAddresses.length;x++ ) {
             withProjectCreator_[x] = _adminAddresses[x];
-        }
-        _profileId = alloRegistry.createProfile(getNonce(), _orgName, getMetadata(_metadataIpfsHash), msg.sender, withProjectCreator_); 
-       // _profileId = alloRegistry.createProfile(getNonce(), _orgName, getMetadata(_metadataIpfsHash), msg.sender, _adminAddresses); 
+        }*/
+     //   _profileId = alloRegistry.createProfile(getNonce(), _orgName, getMetadata(_metadataIpfsHash), msg.sender, withProjectCreator_); 
+        _profileId = alloRegistry.createProfile(getNonce(), _orgName, getMetadata(_metadataIpfsHash), msg.sender, _adminAddresses); 
 
         importExternalProfileInternal(_profileId, _orgName);
         return _profileId; 
     }
 
-    function importExternalProfile(bytes32 _profileId, string memory _profileName)  external returns (bool _added) {
-        require(!knownOrgName[_profileName], "org already created");
+    function createFunderOrgProfileDirect(uint256 _nonce, string memory _orgName, string memory _ipfsHash, address [] memory _adminAddresses ) external returns (bytes32 _profileId) {
+        _profileId = alloRegistry.createProfile(_nonce, _orgName, getMetadata(_ipfsHash), msg.sender, _adminAddresses);
+        importExternalProfileInternal(_profileId, _orgName);
+        return _profileId; 
+    }   
+
+    function importExternalProfile(bytes32 _profileId)  external returns (bool _added) {
         require(!knownProfileId[_profileId], "known profile id");
-        importExternalProfileInternal(_profileId, _profileName);
+
+        string memory profileName_ = alloRegistry.getProfileById(_profileId).name;
+        require(!knownOrgName[profileName_], "org already created");
+        require(isProfileAdminInternal(msg.sender, _profileId), "allo profile / pool admin only ");
+
+        importExternalProfileInternal(_profileId, profileName_);
         return true; 
     }
 
@@ -119,6 +127,13 @@ contract MProjectManager is IMVersion, IMProjectManager {
             poolIdsByOrgName[orgNameByProfileId[_profileId]].push(_poolId);
         }
         return _pool; 
+    }
+
+    function createFundingPoolWithCustomStrategyDirect(string memory _orgName, address _token, uint256 _poolSize, string memory _metadataIpfsHash, address [] memory _poolAdmins) external returns (uint256 _poolId) {
+        _poolId = allo.createPoolWithCustomStrategy(profileIdByOrgName[_orgName], register.getAddress(MARGARI_ALLO_STRATEGY_CA), abi.encode("0"), _token, _poolSize, getMetadata(_metadataIpfsHash), _poolAdmins); 
+        poolIdsByOrgName[_orgName].push(_poolId);
+        return _poolId; 
+
     }
 
     function createFundingPool(string memory _orgName, address _token, uint256 _poolSize,  uint256 _initialFundingAmount, string memory _metadataIpfsHash, address [] memory _poolAdmins) external payable returns (uint256 _poolId){
@@ -180,7 +195,7 @@ contract MProjectManager is IMVersion, IMProjectManager {
 
     //====================================== INTENRAL ===============================================================
     function importExternalProfileInternal(bytes32 _profileId, string memory _profileName)  internal returns (bool _added) {
-        require(isProfileAdminInternal(msg.sender, _profileId), "allo profile / pool admin only ");
+        
 
         knownOrgName[_profileName] = true;
         knownProfileId[_profileId] = true; 
