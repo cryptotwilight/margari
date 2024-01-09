@@ -51,16 +51,16 @@ The following are the deployed contracts for Margari. These contracts interact
 | Chain    | Contract            | Address                                    | 
 |----------|---------------------|--------------------------------------------|
 |*Arbitrum*|    (Testnet)        |                                            |
-| 421614   | MRegister.sol       | [0x6aA7c51924143Bf05851C229c7bb0fB0D19c046D](https://sepolia.arbiscan.io/address/0x6aA7c51924143Bf05851C229c7bb0fB0D19c046D) |
-| 421614   | GVaultFactory.sol   | [0xaA8a63Ab079A5EF4cd5b51a95dE825D40c77ED9d](https://sepolia.arbiscan.io/address/0xaa8a63ab079a5ef4cd5b51a95de825d40c77ed9d) |
-| 421614   | GiltContract.sol    | [0x4Bee91F1707DaA7Bd7BA684a52aB1bdd8Cb38944](https://sepolia.arbiscan.io/address/0x4Bee91F1707DaA7Bd7BA684a52aB1bdd8Cb38944) |
-| 421614   | MSender.sol         | [0x4FE537F6eFe5C63d451e0C7F3540650005CEAe7A](https://sepolia.arbiscan.io/address/0x4FE537F6eFe5C63d451e0C7F3540650005CEAe7A) |
-| 421614   | MReciever.sol       | [0x99bd0287877a957077Fcf2221512ce72aAC360Ba](https://sepolia.arbiscan.io/address/0x99bd0287877a957077fcf2221512ce72aac360ba) |        
-| 421614   | Margari.sol         | [0x4e14C6f0D3E9a7327e48e397C20b2B5a15528ab4](https://sepolia.arbiscan.io/address/0x4e14C6f0D3E9a7327e48e397C20b2B5a15528ab4) |
-| 421614   | MargariStrategy.sol | [0xc7E47139e0f4A90f10ce402a790B6ED0b5ce3aBd]() |
-| 421614   | MProjectFactory.sol | [0x0E826F2B23f9200e9a34D3d15E7BD902cffCC600]() |
-| 421614   | MargariTestToken.sol| [0x5107984C96297564eE9aDC5c77e986B41c9aD25C]() |
-| 421614   | MProjectCreator.sol | []()                                           |
+| 421614   | MRegister.sol       | [0x042B1527ea730bA621F3e005fbfD4C5e34d59ad8](https://sepolia.arbiscan.io/address/0x042B1527ea730bA621F3e005fbfD4C5e34d59ad8) |
+| 421614   | GVaultFactory.sol   | [0x970AaE923695f2697aC8A86569D79a5190c0C3a8](https://sepolia.arbiscan.io/address/0x970AaE923695f2697aC8A86569D79a5190c0C3a8) |
+| 421614   | GiltContract.sol    | [0x7338c3dEF4db3968E1d6D3d4290Fb402768b4a14](https://sepolia.arbiscan.io/address/0x7338c3dEF4db3968E1d6D3d4290Fb402768b4a14) |
+| 421614   | MSender.sol         | [0x901c5E137567Fc5213665a46cC79f43af97d3f4A](https://sepolia.arbiscan.io/address/0x901c5E137567Fc5213665a46cC79f43af97d3f4A) |
+| 421614   | MReciever.sol       | [0x9aE3AbA4cDB5ADd09327f9c7EF894962e8A8Fd30](https://sepolia.arbiscan.io/address/0x9aE3AbA4cDB5ADd09327f9c7EF894962e8A8Fd30) |        
+| 421614   | Margari.sol         | [0xe28f2543Ac730Cd590633081153B655ad68AF2b1](https://sepolia.arbiscan.io/address/0xe28f2543Ac730Cd590633081153B655ad68AF2b1) |
+| 421614   | MargariStrategy.sol | [0x63448cEd7d9C13041E76F68db77D7404e56baA03](https://sepolia.arbiscan.io/address/0x63448cEd7d9C13041E76F68db77D7404e56baA03) |
+| 421614   | MProjectFactory.sol | [0xBD4F3d12340B1e41d988D8d471C0ee581D6C9F44](https://sepolia.arbiscan.io/address/0xBD4F3d12340B1e41d988D8d471C0ee581D6C9F44) |
+| 421614   | MargariTestToken.sol| [0x5107984C96297564eE9aDC5c77e986B41c9aD25C](https://sepolia.arbiscan.io/address/0x5107984C96297564eE9aDC5c77e986B41c9aD25C) |
+| 421614   | MProjectCreator.sol | [0x84819cECCDc4F3781503255b479ED1AC8A7E892C](https://sepolia.arbiscan.io/address/0x84819cECCDc4F3781503255b479ED1AC8A7E892C)                                           |
 |          |                     |                                                |
 |*Sepolia* |   (Testnet)         |                                            |
 | 11155111 | MRegister.sol       | [0x261f61460c2Ca01284f1Df3664985ec9322a867B]() |
