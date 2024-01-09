@@ -33,16 +33,16 @@ Once the above contracts have been deployed the following additional 3rd Party a
 
 Additional to the above addresses the following destination configurations should be set in the Margari Register on each chain where Margari is deployed. 
 The format for the destination configuration *tuple* that needs to be set on the IMRegister.sol contract is shown below: 
-["<chain id>", "<Chainlink Destination Selector>","<Chainlink Router Contract>",["<Accepted Chainlink Payment Token>",...], "<deployment address of MReciever contract>"]
+["${chain id}", "${Chainlink Destination Selector}","${Chainlink Router Contract}",["${Accepted Chainlink Payment Token}",...], "${deployment address of MReciever contract}"]
 
 #### Sepolia
 This destination configuration is set on other chains (not Sepolia) e.g. Arbitrum Sepolia
-["11155111","16015286601757825753","0x0bf3de8c5d3e8a2b34d2beeb17abfcebaf363a59",["0x779877A7B0D9E8603169DdbD7836e478b4624789","0x097D90c9d3E0B50Ca60e1ae45F6A81010f9FB534"],"<deployment address of MReciever contract>"]
+["11155111","16015286601757825753","0x0bf3de8c5d3e8a2b34d2beeb17abfcebaf363a59",["0x779877A7B0D9E8603169DdbD7836e478b4624789","0x097D90c9d3E0B50Ca60e1ae45F6A81010f9FB534"],"0x9b8E907b2e91e8E2bDcCF30505fF7d508C190544"]
 
 ""
 #### Arbitrum Sepolia
 This destination configuration is set on other chains (not Arbitrum Sepolia) e.g. Sepolia
-["421614","3478487238524512106","0x2a9c5afb0d0e4bab2bcdae109ec4b0c4be15a165",["0xdc2CC710e42857672E7907CF474a69B63B93089f","0xE591bf0A0CF924A0674d7792db046B23CEbF5f34"],"<deployment address of MReciever contract>"]
+["421614","3478487238524512106","0x2a9c5afb0d0e4bab2bcdae109ec4b0c4be15a165",["0xdc2CC710e42857672E7907CF474a69B63B93089f","0xE591bf0A0CF924A0674d7792db046B23CEbF5f34"],"0x9aE3AbA4cDB5ADd09327f9c7EF894962e8A8Fd30"]
 
 
 ## Deployed Contracts 
