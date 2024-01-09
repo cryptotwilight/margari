@@ -32,11 +32,16 @@ Once the above contracts have been deployed the following additional 3rd Party a
 ### Destination Configurations 
 
 Additional to the above addresses the following destination configurations should be set in the Margari Register on each chain where Margari is deployed. 
+The format for the destination configuration *tuple* that needs to be set on the IMRegister.sol contract is shown below: 
+["<chain id>", "<Chainlink Destination Selector>","<Chainlink Router Contract>",["<Accepted Chainlink Payment Token>",...], "<deployment address of MReciever contract>"]
 
 #### Sepolia
+This destination configuration is set on other chains (not Sepolia) e.g. Arbitrum Sepolia
 ["11155111","16015286601757825753","0x0bf3de8c5d3e8a2b34d2beeb17abfcebaf363a59",["0x779877A7B0D9E8603169DdbD7836e478b4624789","0x097D90c9d3E0B50Ca60e1ae45F6A81010f9FB534"],"<deployment address of MReciever contract>"]
 
+""
 #### Arbitrum Sepolia
+This destination configuration is set on other chains (not Arbitrum Sepolia) e.g. Sepolia
 ["421614","3478487238524512106","0x2a9c5afb0d0e4bab2bcdae109ec4b0c4be15a165",["0xdc2CC710e42857672E7907CF474a69B63B93089f","0xE591bf0A0CF924A0674d7792db046B23CEbF5f34"],"<deployment address of MReciever contract>"]
 
 
@@ -66,4 +71,4 @@ The following are the deployed contracts for Margari. These contracts interact
 | 11155111 | Margari.sol         | [0x16B0975dc8B4eaDB28F2a776C8BcE499875E3Bb8]() |
 | 11155111 | MargariTestToken.sol| [0x1C5A3cDd6E29D15a170fb74AB1ea257c6993bEe1]() |
 
-*NOTE: * Margari is only is deployed on Sepolia as it is utilised for claiming Gilts only.
+**NOTE:** Margari is only is deployed on Sepolia as it is utilised for claiming Gilts only.
