@@ -57,12 +57,13 @@ The following are the deployed contracts for Margari. These contracts interact
 | 421614   | MargariTestToken.sol| [0x5107984C96297564eE9aDC5c77e986B41c9aD25C]() |
 | 421614   | MProjectCreator.sol | []()                                           |
 |          |                     |                                                |
-
 |*Sepolia* |   (Testnet)         |                                            |
-| 11155111 | MRegister.sol       | 0x261f61460c2Ca01284f1Df3664985ec9322a867B |
-| 11155111 | GVaultFactory.sol   | 0xeCc1223fcE6cE6A5eeC9ea84Af16aC15cc7b1855 |
-| 11155111 | GiltContract.sol    | 0x2892FFbF7ad1985cB8176BEd59d8378EF8a1225D |
-| 11155111 | MSender.sol         | 0x536936c3d3e38eC6A97585c31F5063b770Cf2EAd |
-| 11155111 | MReciever.sol       | 0x9b8E907b2e91e8E2bDcCF30505fF7d508C190544 |        
-| 11155111 | Margari.sol         | 0x16B0975dc8B4eaDB28F2a776C8BcE499875E3Bb8 |
-| 11155111 | MargariTestToken.sol| 0x1C5A3cDd6E29D15a170fb74AB1ea257c6993bEe1 |
+| 11155111 | MRegister.sol       | [0x261f61460c2Ca01284f1Df3664985ec9322a867B]() |
+| 11155111 | GVaultFactory.sol   | [0xeCc1223fcE6cE6A5eeC9ea84Af16aC15cc7b1855]() |
+| 11155111 | GiltContract.sol    | [0x2892FFbF7ad1985cB8176BEd59d8378EF8a1225D]() |
+| 11155111 | MSender.sol         | [0x536936c3d3e38eC6A97585c31F5063b770Cf2EAd]() |
+| 11155111 | MReciever.sol       | [0x9b8E907b2e91e8E2bDcCF30505fF7d508C190544]() |        
+| 11155111 | Margari.sol         | [0x16B0975dc8B4eaDB28F2a776C8BcE499875E3Bb8]() |
+| 11155111 | MargariTestToken.sol| [0x1C5A3cDd6E29D15a170fb74AB1ea257c6993bEe1]() |
+
+*NOTE: * Margari is only is deployed on Sepolia as it is utilised for claiming Gilts only.
