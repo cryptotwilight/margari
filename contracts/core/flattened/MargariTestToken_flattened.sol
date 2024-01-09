@@ -2287,7 +2287,7 @@ abstract contract ERC20Burnable is Context, ERC20 {
 // File: contracts/core/MargariTestToken.sol
 
 
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.23;
 
 
 

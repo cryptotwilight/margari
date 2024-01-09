@@ -81,7 +81,7 @@ contract ProjectFactory is IMProjectFactory, IMVersion {
         IRegistry alloRegistry = allo.getRegistry(); 
         if(allo.isPoolManager(_poolId, _address) 
             || allo.isPoolAdmin(_poolId, _address) 
-            || alloRegistry.isOwnerOfProfile(_profileId, _address)){
+            || alloRegistry.isOwnerOrMemberOfProfile(_profileId, _address)){
             return true; 
         }
         return false; 
