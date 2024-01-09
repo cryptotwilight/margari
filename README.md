@@ -7,6 +7,28 @@ As decentralized forms of working become more the norm and on chain working begi
 ## Why Margari 
 Margari was created to enable projects leveraging the Allo Protocol to seemlessly transmit approved funds to project contributors regardless of where they reside on chain. The premise of the Margari protocol is to provide security and flexibility by leveraging the Allo Registry to maintain project security and by enabling the projects to self organise their deliverables within the context of their allocated budget. In the fund distribution phase of the project Margari shines by leveraging Chainlink CCIP to transmit (Gilts which are NFTs representing bonded funds) to foreign chains where contributors can claim/dispose/repatriate as required. Thus project contributors (e.g. your average content producer) no longer have to worry about navigating the challenging world of cross chain bridges, and irrecoverable funds etc.
 
+## To Try Out 
+To try out Margari you need to go to the following link below: 
+
+There you will need to 
+
+1. create an organisational profile 
+2. Create and fund a grant funding pool for your organisational profile 
+3. Create a project with a budget that is drawn from the funding pool i.e. your project pool can be all or some of the funding pool. 
+4. You then need to add 2 Contributors to your project.
+    4a. One Contributor should be local to Arbitrum Sepolia (testnet) 
+    4b. One Contributor should be local to Sepolia (testnet)
+5. You then need to add 20 Deliverables to your project one assigned to each of your Contributors created in Step 4. 
+6. Each Contributor then needs to submit their deliverable
+7. You then need to trigger distribute on your Allo Profile 
+    -> This will trigger automated funds distribution to each of your contributors
+    -> Local chain (Arbitrum Sepolia) contributors will be paid directly 
+    -> Remote chain (Sepolia) contributors will recieve a Gilt claimable on their local chain from Margari 
+    
+
+
+
+
 
 ## Margari Deploy Order 
 To build Margari using remix the contract deployment order listed below is to be followed, after each contract is deployed it's address should be added to the registry using the addMVersion() function for automated registration: 
