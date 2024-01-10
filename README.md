@@ -24,7 +24,7 @@ There you will need to
     -> This will trigger automated funds distribution to each of your contributors
     -> Local chain (Arbitrum Sepolia) contributors will be paid directly 
     -> Remote chain (Sepolia) contributors will recieve a Gilt claimable on their local chain from Margari 
-    
+
 
 
 
@@ -79,7 +79,7 @@ The following are the deployed contracts for Margari. These contracts interact
 | 421614   | MSender.sol         | [0x901c5E137567Fc5213665a46cC79f43af97d3f4A](https://sepolia.arbiscan.io/address/0x901c5E137567Fc5213665a46cC79f43af97d3f4A) |
 | 421614   | MReciever.sol       | [0x9aE3AbA4cDB5ADd09327f9c7EF894962e8A8Fd30](https://sepolia.arbiscan.io/address/0x9aE3AbA4cDB5ADd09327f9c7EF894962e8A8Fd30) |        
 | 421614   | Margari.sol         | [0xe28f2543Ac730Cd590633081153B655ad68AF2b1](https://sepolia.arbiscan.io/address/0xe28f2543Ac730Cd590633081153B655ad68AF2b1) |
-| 421614   | MargariStrategy.sol | [0x63448cEd7d9C13041E76F68db77D7404e56baA03](https://sepolia.arbiscan.io/address/0x63448cEd7d9C13041E76F68db77D7404e56baA03) |
+| 421614   | MargariStrategy.sol | [0xEcfD66f7AAad3c397f4e9D39A9fA12a5AA1B1774](https://sepolia.arbiscan.io/address/0xEcfD66f7AAad3c397f4e9D39A9fA12a5AA1B1774) |
 | 421614   | MProjectFactory.sol | [0x4B26b0e7530fbfB176f92F6b29C46F450846cB49](https://sepolia.arbiscan.io/address/0x4B26b0e7530fbfB176f92F6b29C46F450846cB49) |
 | 421614   | MargariTestToken.sol| [0x27d224661945BD875BE514969503140c1481A573](https://sepolia.arbiscan.io/address/0x27d224661945BD875BE514969503140c1481A573) |
 | 421614   | MProjectCreator.sol | [0x84819cECCDc4F3781503255b479ED1AC8A7E892C](https://sepolia.arbiscan.io/address/0x84819cECCDc4F3781503255b479ED1AC8A7E892C)                                           |
