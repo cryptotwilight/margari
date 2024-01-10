@@ -82,7 +82,7 @@ The following are the deployed contracts for Margari. These contracts interact
 | 421614   | MargariStrategy.sol | [0xEcfD66f7AAad3c397f4e9D39A9fA12a5AA1B1774](https://sepolia.arbiscan.io/address/0xEcfD66f7AAad3c397f4e9D39A9fA12a5AA1B1774) |
 | 421614   | MProjectFactory.sol | [0x4B26b0e7530fbfB176f92F6b29C46F450846cB49](https://sepolia.arbiscan.io/address/0x4B26b0e7530fbfB176f92F6b29C46F450846cB49) |
 | 421614   | MargariTestToken.sol| [0x27d224661945BD875BE514969503140c1481A573](https://sepolia.arbiscan.io/address/0x27d224661945BD875BE514969503140c1481A573) |
-| 421614   | MProjectCreator.sol | [0x84819cECCDc4F3781503255b479ED1AC8A7E892C](https://sepolia.arbiscan.io/address/0x84819cECCDc4F3781503255b479ED1AC8A7E892C)                                           |
+| 421614   | MProjectManager.sol | [0x84819cECCDc4F3781503255b479ED1AC8A7E892C](https://sepolia.arbiscan.io/address/0x84819cECCDc4F3781503255b479ED1AC8A7E892C)                                           |
 |          |                     |                                                |
 |*Sepolia* |   (Testnet)         |                                            |
 | 11155111 | MRegister.sol       | [0x261f61460c2Ca01284f1Df3664985ec9322a867B]() |
