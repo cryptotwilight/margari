@@ -186,80 +186,131 @@ const MargariProjectAdmin = () => {
 
   return (
     <>
-      <WidgetsDropdown />
       <CRow>
-        <CCol xs={4}>
+        <CCol xs={3}>
           <CCard className="mb-4">
             <CCardHeader>
-              <strong>Create Allo Profile</strong>
+              <strong>Import Profile</strong>
             </CCardHeader>
             <CCardBody>
-              <DocsExample href="forms/form-control">
-                <CForm>
-                  <div className="mb-3">
-                    <CFormLabel htmlFor="exampleFormControlInput1">Email address</CFormLabel>
-                    <CFormInput
-                      type="email"
-                      id="exampleFormControlInput1"
-                      placeholder="name@example.com"
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <CFormLabel htmlFor="exampleFormControlTextarea1">Example textarea</CFormLabel>
-                    <CFormTextarea id="exampleFormControlTextarea1" rows="3"></CFormTextarea>
-                  </div>
-                </CForm>
-              </DocsExample>
+              <CForm>
+                <CFormLabel>Allo Profile Id</CFormLabel>
+                <CFormInput type="text" id="import_profileId" placeholder="0x..." />
+                <CButton value={'Import'}>Import Profile</CButton>
+              </CForm>
+            </CCardBody>
+          </CCard>
+          <CCard className="mb-4">
+            <CCardHeader>
+              <strong>Import Allo Pool</strong>
+            </CCardHeader>
+            <CCardBody>
+              <CForm>
+                <CFormLabel>Profile Id</CFormLabel>
+                <CFormInput type="text" id="import_profileId" placeholder="0x..." />
+                <CFormLabel>Pool Id</CFormLabel>
+                <CFormInput type="text" id="import_poolId" placeholder="numeric" />
+                <CButton value={'Import'}>Import Pool</CButton>
+              </CForm>
             </CCardBody>
           </CCard>
         </CCol>
-        <CCol xs={4}>
+        <CCol xs={3}>
+          <CCard className="mb-4">
+            <CCardHeader>
+              <strong>Add Margari Project Manager to Allo Profile Members</strong>
+            </CCardHeader>
+            <CCardBody>
+              <CForm>
+                <CFormLabel>Profile Id</CFormLabel>
+                <CFormInput type="text" id="profileId" placeholder="0x..." />
+                <CButton value={'Import'}>Add</CButton>
+              </CForm>
+            </CCardBody>
+          </CCard>
+          <CCard className="mb-4">
+            <CCardHeader>
+              <strong>Add Margari Project Manager to Allo Pool Managers</strong>
+            </CCardHeader>
+            <CCardBody>
+              <CForm>
+                <CFormLabel>Profile Id</CFormLabel>
+                <CFormInput type="text" id="profileId" placeholder="0x..." />
+                <CFormLabel>Pool Id</CFormLabel>
+                <CFormInput type="text" id="poolId" placeholder="numeric" />
+                <CButton value={'Import'}>Add</CButton>
+              </CForm>
+            </CCardBody>
+          </CCard>
+        </CCol>
+        <CCol xs={3}>
           <CCard className="mb-4">
             <CCardHeader>
               <strong>Create Grant Project Funding Pool</strong>
             </CCardHeader>
             <CCardBody>
-              <DocsExample href="forms/form-control">
-                <CForm>
-                  <div className="mb-3">
-                    <CFormLabel htmlFor="exampleFormControlInput1">Email address</CFormLabel>
-                    <CFormInput
-                      type="email"
-                      id="exampleFormControlInput1"
-                      placeholder="name@example.com"
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <CFormLabel htmlFor="exampleFormControlTextarea1">Example textarea</CFormLabel>
-                    <CFormTextarea id="exampleFormControlTextarea1" rows="3"></CFormTextarea>
-                  </div>
-                </CForm>
-              </DocsExample>
+              <CForm>
+                <CFormLabel>Organisation</CFormLabel>
+                <CFormInput type="text" id="profileName" placeholder="name of organisation" />
+                <CFormLabel>Token</CFormLabel>
+                <CFormInput type="text" id="token" placeholder="0x..." />
+                <CFormLabel>Grant Funds To Transfer</CFormLabel>
+                <CFormInput type="text" id="funds" placeholder="numeric" />
+                <CButton value={'Import'}>Approve Transfer</CButton>
+                <CFormLabel>IPFS Hash to Detailed Grant Description</CFormLabel>
+                <CFormInput
+                  type="text"
+                  id="metadata_ipfshash"
+                  placeholder="e.g. bafkreifpaiuh6z4nxrvwdwdwtglvunkbh5x64rakiyna5sl4unrqp2qjdq"
+                />
+                <CFormLabel>Pool Administrators</CFormLabel>
+                <CFormInput type="text" id="poolAdmins" placeholder="[0x...,0x...]" />
+                <CButton value={'Import'}>Create Pool</CButton>
+              </CForm>
             </CCardBody>
           </CCard>
         </CCol>
-        <CCol xs={4}>
+        <CCol xs={3}>
           <CCard className="mb-4">
             <CCardHeader>
               <strong>Create Margari Grant Funded Project</strong>
             </CCardHeader>
             <CCardBody>
-              <DocsExample href="forms/form-control">
-                <CForm>
-                  <div className="mb-3">
-                    <CFormLabel htmlFor="exampleFormControlInput1">Email address</CFormLabel>
-                    <CFormInput
-                      type="email"
-                      id="exampleFormControlInput1"
-                      placeholder="name@example.com"
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <CFormLabel htmlFor="exampleFormControlTextarea1">Example textarea</CFormLabel>
-                    <CFormTextarea id="exampleFormControlTextarea1" rows="3"></CFormTextarea>
-                  </div>
-                </CForm>
-              </DocsExample>
+              <CForm>
+                <CFormLabel>Organisation</CFormLabel>
+                <CFormInput type="text" id="profileName" placeholder="name of organisation" />
+                <CFormLabel>Pool Id</CFormLabel>
+                <CFormInput type="text" id="poolId" placeholder="numeric" />
+                <CFormLabel>Project Name</CFormLabel>
+                <CFormInput type="text" id="projectName" placeholder="name of project" />
+                <CFormLabel>Project Budget</CFormLabel>
+                <CFormInput type="text" id="projectBudget" placeholder="numeric" />
+                <CButton value={'Import'}>Create Project</CButton>
+              </CForm>
+            </CCardBody>
+          </CCard>
+          <CCard className="mb-4">
+            <CCardHeader>
+              <strong>Add Deliverable To Project</strong>
+            </CCardHeader>
+            <CCardBody>
+              <CForm>
+                <CFormLabel>Project Id</CFormLabel>
+                <CFormInput type="text" id="projectName" placeholder="id of project" />
+                <CFormLabel>Name</CFormLabel>
+                <CFormInput type="text" id="deliverableName" placeholder="name" />
+                <CFormLabel>Deliverable Award</CFormLabel>
+                <CFormInput type="text" id="projectName" placeholder="payout amount" />
+                <CFormLabel>Deliverable Details (Ipfshash)</CFormLabel>
+                <CFormInput
+                  type="text"
+                  id="deliverableMetadata"
+                  placeholder="deliverable details"
+                />
+                <CFormLabel>Assigned Contributor Id</CFormLabel>
+                <CFormInput type="text" id="contributor" placeholder="numeric" />
+                <CButton value={'Import'}>Create Deliverable</CButton>
+              </CForm>
             </CCardBody>
           </CCard>
         </CCol>
@@ -300,192 +351,6 @@ const MargariProjectAdmin = () => {
                     <CTableDataCell>Thornton</CTableDataCell>
                     <CTableDataCell>@twitter</CTableDataCell>
                   </CTableRow>
-                </CTableBody>
-              </CTable>
-            </CCardBody>
-          </CCard>
-        </CCol>
-      </CRow>
-      <CRow>
-        <CCol xs={12}>
-          <CCard className="mb-4">
-            <CCardHeader>
-              <strong>My Margari Payouts </strong>
-              <small>Below are all the Margari which you are associated.</small>
-            </CCardHeader>
-            <CCardBody>
-              <CTable>
-                <CTableHead>
-                  <CTableRow>
-                    <CTableHeaderCell scope="col"># Project Id</CTableHeaderCell>
-                    <CTableHeaderCell scope="col">Org Funder</CTableHeaderCell>
-                    <CTableHeaderCell scope="col">Budget</CTableHeaderCell>
-                    <CTableHeaderCell scope="col">Collaborators</CTableHeaderCell>
-                  </CTableRow>
-                </CTableHead>
-                <CTableBody>
-                  <CTableRow>
-                    <CTableHeaderCell scope="row">1</CTableHeaderCell>
-                    <CTableDataCell>Mark</CTableDataCell>
-                    <CTableDataCell>Otto</CTableDataCell>
-                    <CTableDataCell>@mdo</CTableDataCell>
-                  </CTableRow>
-                  <CTableRow>
-                    <CTableHeaderCell scope="row">2</CTableHeaderCell>
-                    <CTableDataCell>Jacob</CTableDataCell>
-                    <CTableDataCell>Thornton</CTableDataCell>
-                    <CTableDataCell>@fat</CTableDataCell>
-                  </CTableRow>
-                  <CTableRow>
-                    <CTableHeaderCell scope="row">3</CTableHeaderCell>
-                    <CTableDataCell>Larry the Bird</CTableDataCell>
-                    <CTableDataCell>Thornton</CTableDataCell>
-                    <CTableDataCell>@twitter</CTableDataCell>
-                  </CTableRow>
-                </CTableBody>
-              </CTable>
-            </CCardBody>
-          </CCard>
-        </CCol>
-      </CRow>
-      <CRow>
-        <CCol xs>
-          <CCard className="mb-4">
-            <CCardHeader>Traffic {' & '} Sales</CCardHeader>
-            <CCardBody>
-              <CRow>
-                <CCol xs={12} md={6} xl={6}>
-                  <CRow>
-                    <CCol sm={6}>
-                      <div className="border-start border-start-4 border-start-info py-1 px-3">
-                        <div className="text-medium-emphasis small">New Clients</div>
-                        <div className="fs-5 fw-semibold">9,123</div>
-                      </div>
-                    </CCol>
-                    <CCol sm={6}>
-                      <div className="border-start border-start-4 border-start-danger py-1 px-3 mb-3">
-                        <div className="text-medium-emphasis small">Recurring Clients</div>
-                        <div className="fs-5 fw-semibold">22,643</div>
-                      </div>
-                    </CCol>
-                  </CRow>
-
-                  <hr className="mt-0" />
-                  {progressGroupExample1.map((item, index) => (
-                    <div className="progress-group mb-4" key={index}>
-                      <div className="progress-group-prepend">
-                        <span className="text-medium-emphasis small">{item.title}</span>
-                      </div>
-                      <div className="progress-group-bars">
-                        <CProgress thin color="info" value={item.value1} />
-                        <CProgress thin color="danger" value={item.value2} />
-                      </div>
-                    </div>
-                  ))}
-                </CCol>
-
-                <CCol xs={12} md={6} xl={6}>
-                  <CRow>
-                    <CCol sm={6}>
-                      <div className="border-start border-start-4 border-start-warning py-1 px-3 mb-3">
-                        <div className="text-medium-emphasis small">Pageviews</div>
-                        <div className="fs-5 fw-semibold">78,623</div>
-                      </div>
-                    </CCol>
-                    <CCol sm={6}>
-                      <div className="border-start border-start-4 border-start-success py-1 px-3 mb-3">
-                        <div className="text-medium-emphasis small">Organic</div>
-                        <div className="fs-5 fw-semibold">49,123</div>
-                      </div>
-                    </CCol>
-                  </CRow>
-
-                  <hr className="mt-0" />
-
-                  {progressGroupExample2.map((item, index) => (
-                    <div className="progress-group mb-4" key={index}>
-                      <div className="progress-group-header">
-                        <CIcon className="me-2" icon={item.icon} size="lg" />
-                        <span>{item.title}</span>
-                        <span className="ms-auto fw-semibold">{item.value}%</span>
-                      </div>
-                      <div className="progress-group-bars">
-                        <CProgress thin color="warning" value={item.value} />
-                      </div>
-                    </div>
-                  ))}
-
-                  <div className="mb-5"></div>
-
-                  {progressGroupExample3.map((item, index) => (
-                    <div className="progress-group" key={index}>
-                      <div className="progress-group-header">
-                        <CIcon className="me-2" icon={item.icon} size="lg" />
-                        <span>{item.title}</span>
-                        <span className="ms-auto fw-semibold">
-                          {item.value}{' '}
-                          <span className="text-medium-emphasis small">({item.percent}%)</span>
-                        </span>
-                      </div>
-                      <div className="progress-group-bars">
-                        <CProgress thin color="success" value={item.percent} />
-                      </div>
-                    </div>
-                  ))}
-                </CCol>
-              </CRow>
-
-              <br />
-
-              <CTable align="middle" className="mb-0 border" hover responsive>
-                <CTableHead color="light">
-                  <CTableRow>
-                    <CTableHeaderCell className="text-center">
-                      <CIcon icon={cilPeople} />
-                    </CTableHeaderCell>
-                    <CTableHeaderCell>User</CTableHeaderCell>
-                    <CTableHeaderCell className="text-center">Country</CTableHeaderCell>
-                    <CTableHeaderCell>Usage</CTableHeaderCell>
-                    <CTableHeaderCell className="text-center">Payment Method</CTableHeaderCell>
-                    <CTableHeaderCell>Activity</CTableHeaderCell>
-                  </CTableRow>
-                </CTableHead>
-                <CTableBody>
-                  {tableExample.map((item, index) => (
-                    <CTableRow v-for="item in tableItems" key={index}>
-                      <CTableDataCell className="text-center">
-                        <CAvatar size="md" src={item.avatar.src} status={item.avatar.status} />
-                      </CTableDataCell>
-                      <CTableDataCell>
-                        <div>{item.user.name}</div>
-                        <div className="small text-medium-emphasis">
-                          <span>{item.user.new ? 'New' : 'Recurring'}</span> | Registered:{' '}
-                          {item.user.registered}
-                        </div>
-                      </CTableDataCell>
-                      <CTableDataCell className="text-center">
-                        <CIcon size="xl" icon={item.country.flag} title={item.country.name} />
-                      </CTableDataCell>
-                      <CTableDataCell>
-                        <div className="clearfix">
-                          <div className="float-start">
-                            <strong>{item.usage.value}%</strong>
-                          </div>
-                          <div className="float-end">
-                            <small className="text-medium-emphasis">{item.usage.period}</small>
-                          </div>
-                        </div>
-                        <CProgress thin color={item.usage.color} value={item.usage.value} />
-                      </CTableDataCell>
-                      <CTableDataCell className="text-center">
-                        <CIcon size="xl" icon={item.payment.icon} />
-                      </CTableDataCell>
-                      <CTableDataCell>
-                        <div className="small text-medium-emphasis">Last login</div>
-                        <strong>{item.activity}</strong>
-                      </CTableDataCell>
-                    </CTableRow>
-                  ))}
                 </CTableBody>
               </CTable>
             </CCardBody>

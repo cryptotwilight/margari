@@ -6,10 +6,20 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { Provider } from 'react-redux'
 import store from './store'
+import { MetaMaskUIProvider } from '@metamask/sdk-react-ui'
 
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>
+    <MetaMaskUIProvider
+      sdkOptions={{
+        dappMetadata: {
+          name: 'Margari',
+        url: window.location.host,
+        }
+        // Other options
+      }}>
     <App />
+    </MetaMaskUIProvider>
   </Provider>,
 )
 

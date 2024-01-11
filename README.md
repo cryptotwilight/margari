@@ -77,20 +77,20 @@ The following are the deployed contracts for Margari. These contracts interact
 | 421614   | GVaultFactory.sol   | [0x970AaE923695f2697aC8A86569D79a5190c0C3a8](https://sepolia.arbiscan.io/address/0x970AaE923695f2697aC8A86569D79a5190c0C3a8) |
 | 421614   | GiltContract.sol    | [0x7338c3dEF4db3968E1d6D3d4290Fb402768b4a14](https://sepolia.arbiscan.io/address/0x7338c3dEF4db3968E1d6D3d4290Fb402768b4a14) |
 | 421614   | MSender.sol         | [0x901c5E137567Fc5213665a46cC79f43af97d3f4A](https://sepolia.arbiscan.io/address/0x901c5E137567Fc5213665a46cC79f43af97d3f4A) |
-| 421614   | MReciever.sol       | [0x9aE3AbA4cDB5ADd09327f9c7EF894962e8A8Fd30](https://sepolia.arbiscan.io/address/0x9aE3AbA4cDB5ADd09327f9c7EF894962e8A8Fd30) |        
+| 421614   | MReciever.sol       | [0xC0BDf2e759513745e9Fe74b939f92C661b4135a0](https://sepolia.arbiscan.io/address/0xC0BDf2e759513745e9Fe74b939f92C661b4135a0) |        
 | 421614   | Margari.sol         | [0xe28f2543Ac730Cd590633081153B655ad68AF2b1](https://sepolia.arbiscan.io/address/0xe28f2543Ac730Cd590633081153B655ad68AF2b1) |
-| 421614   | MargariStrategy.sol | [0xEcfD66f7AAad3c397f4e9D39A9fA12a5AA1B1774](https://sepolia.arbiscan.io/address/0xEcfD66f7AAad3c397f4e9D39A9fA12a5AA1B1774) |
+| 421614   | MStrategyFactory.sol | [0xF4588126a648E55E0073B5cb378AFd8d392f55E5](https://sepolia.arbiscan.io/address/0xF4588126a648E55E0073B5cb378AFd8d392f55E5) |
 | 421614   | MProjectFactory.sol | [0x4B26b0e7530fbfB176f92F6b29C46F450846cB49](https://sepolia.arbiscan.io/address/0x4B26b0e7530fbfB176f92F6b29C46F450846cB49) |
-| 421614   | MargariTestToken.sol| [0x27d224661945BD875BE514969503140c1481A573](https://sepolia.arbiscan.io/address/0x27d224661945BD875BE514969503140c1481A573) |
-| 421614   | MProjectManager.sol | [0x84819cECCDc4F3781503255b479ED1AC8A7E892C](https://sepolia.arbiscan.io/address/0x84819cECCDc4F3781503255b479ED1AC8A7E892C)                                           |
+| 421614   | MargariTestToken.sol| [0x5107984C96297564eE9aDC5c77e986B41c9aD25C](https://sepolia.arbiscan.io/address/0x5107984C96297564eE9aDC5c77e986B41c9aD25C) |
+| 421614   | MProjectManager.sol | [0x2e2eBFFA0077f7fb893AC592664404af03A301a9](https://sepolia.arbiscan.io/address/0x2e2eBFFA0077f7fb893AC592664404af03A301a9)                                           |
 |          |                     |                                                |
 |*Sepolia* |   (Testnet)         |                                            |
-| 11155111 | MRegister.sol       | [0x261f61460c2Ca01284f1Df3664985ec9322a867B]() |
-| 11155111 | GVaultFactory.sol   | [0xeCc1223fcE6cE6A5eeC9ea84Af16aC15cc7b1855]() |
-| 11155111 | GiltContract.sol    | [0x2892FFbF7ad1985cB8176BEd59d8378EF8a1225D]() |
-| 11155111 | MSender.sol         | [0x536936c3d3e38eC6A97585c31F5063b770Cf2EAd]() |
-| 11155111 | MReciever.sol       | [0x9b8E907b2e91e8E2bDcCF30505fF7d508C190544]() |        
-| 11155111 | Margari.sol         | [0x16B0975dc8B4eaDB28F2a776C8BcE499875E3Bb8]() |
-| 11155111 | MargariTestToken.sol| [0x1C5A3cDd6E29D15a170fb74AB1ea257c6993bEe1]() |
+| 11155111 | MRegister.sol       | [0x547E3994Cb80D773B9CC701b2D7867Acb016310f](https://sepolia.etherscan.io/address/0x547E3994Cb80D773B9CC701b2D7867Acb016310f) |
+| 11155111 | GVaultFactory.sol   | [0xAE395747B112AFC3C02E22Da40e78948A551A03e](https://sepolia.etherscan.io/address/0xAE395747B112AFC3C02E22Da40e78948A551A03e) |
+| 11155111 | GiltContract.sol    | [0x73c464a38C9EdCeC85b6fdF7F78A57188C6E226e](https://sepolia.etherscan.io/address/0x73c464a38C9EdCeC85b6fdF7F78A57188C6E226e) |
+| 11155111 | MSender.sol         | [0xC81aB838A71E14504295eCAa4Bcbd6179993148E](https://sepolia.etherscan.io/address/0xC81aB838A71E14504295eCAa4Bcbd6179993148E) |
+| 11155111 | MReciever.sol       | [0x7bc1e292ce4130f300a5faf66bf6c3064527c741](https://sepolia.etherscan.io/address/0x7bc1e292ce4130f300a5faf66bf6c3064527c741) |        
+| 11155111 | Margari.sol         | [0x404431A5e61Aed2352173Af68f19C768F84904ee](https://sepolia.etherscan.io/address/0x404431A5e61Aed2352173Af68f19C768F84904ee) |
+| 11155111 | MargariTestToken.sol| [0xEd26c5374fCa573c15b678423A5eb07584ba07E1](https://sepolia.etherscan.io/address/0xEd26c5374fCa573c15b678423A5eb07584ba07E1) |
 
 **NOTE:** Margari is only is deployed on Sepolia as it is utilised for claiming Gilts only.
