@@ -80,7 +80,7 @@ The following are the deployed contracts for Margari. These contracts interact
 | 421614   | MReciever.sol       | [0xC0BDf2e759513745e9Fe74b939f92C661b4135a0](https://sepolia.arbiscan.io/address/0xC0BDf2e759513745e9Fe74b939f92C661b4135a0) |        
 | 421614   | Margari.sol         | [0xe28f2543Ac730Cd590633081153B655ad68AF2b1](https://sepolia.arbiscan.io/address/0xe28f2543Ac730Cd590633081153B655ad68AF2b1) |
 | 421614   | MStrategyFactory.sol | [0xF4588126a648E55E0073B5cb378AFd8d392f55E5](https://sepolia.arbiscan.io/address/0xF4588126a648E55E0073B5cb378AFd8d392f55E5) |
-| 421614   | MProjectFactory.sol | [0x4B26b0e7530fbfB176f92F6b29C46F450846cB49](https://sepolia.arbiscan.io/address/0x4B26b0e7530fbfB176f92F6b29C46F450846cB49) |
+| 421614   | MProjectFactory.sol | [0x6d732665fE1b1FD497e8B7E7bBfD7903AE38289B](https://sepolia.arbiscan.io/address/0x6d732665fE1b1FD497e8B7E7bBfD7903AE38289B) |
 | 421614   | MargariTestToken.sol| [0x5107984C96297564eE9aDC5c77e986B41c9aD25C](https://sepolia.arbiscan.io/address/0x5107984C96297564eE9aDC5c77e986B41c9aD25C) |
 | 421614   | MProjectManager.sol | [0x2e2eBFFA0077f7fb893AC592664404af03A301a9](https://sepolia.arbiscan.io/address/0x2e2eBFFA0077f7fb893AC592664404af03A301a9)                                           |
 |          |                     |                                                |
