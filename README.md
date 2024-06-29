@@ -57,15 +57,13 @@ Additional to the above addresses the following destination configurations shoul
 The format for the destination configuration *tuple* that needs to be set on the IMRegister.sol contract is shown below: 
 ["${chain id}", "${Chainlink Destination Selector}","${Chainlink Router Contract}",["${Accepted Chainlink Payment Token}",...], "${deployment address of MReciever contract}"]
 
-#### Sepolia
-This destination configuration is set on other chains (not Sepolia) e.g. Arbitrum Sepolia
-["11155111","16015286601757825753","0x0bf3de8c5d3e8a2b34d2beeb17abfcebaf363a59",["0x779877A7B0D9E8603169DdbD7836e478b4624789","0x097D90c9d3E0B50Ca60e1ae45F6A81010f9FB534"],"0x9b8E907b2e91e8E2bDcCF30505fF7d508C190544"]
 
-""
-#### Arbitrum Sepolia
-This destination configuration is set on other chains (not Arbitrum Sepolia) e.g. Sepolia
-["421614","3478487238524512106","0x2a9c5afb0d0e4bab2bcdae109ec4b0c4be15a165",["0xdc2CC710e42857672E7907CF474a69B63B93089f","0xE591bf0A0CF924A0674d7792db046B23CEbF5f34"],"0x9aE3AbA4cDB5ADd09327f9c7EF894962e8A8Fd30"]
-
+|Chain Name    | Chain Id | CCIP Chain Selector  | CCIP Router Addresss                       | Fee Token Addresses | Margari Gilt Reciever Address | Config Object | 
+|--------------|----------|------------------ ---|--------------------------------------------|---------------------|-------------------------------|---------------|
+|Base Sepolia  | 84532    | 10344971235874465080 | 0xD3b06cEbF099CE7DA4AcCf578aaebFDBd6e88a93 | 0xE4aB69C077896252FAFBD49EFD26B5D171A32410,0x4200000000000000000000000000000000000006,0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE | 0x7bc1e292ce4130f300a5faf66bf6c3064527c741 | ["84532","10344971235874465080","0xD3b06cEbF099CE7DA4AcCf578aaebFDBd6e88a93",["0xE4aB69C077896252FAFBD49EFD26B5D171A32410","0x4200000000000000000000000000000000000006","0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"],"0x7bc1e292ce4130f300a5faf66bf6c3064527c741"] |
+|OP Sepolia    | 11155420 | 5224473277236331295 | 0x114A20A10b43D4115e5aeef7345a1A71d2a60C57 | 0xE4aB69C077896252FAFBD49EFD26B5D171A32410,0x4200000000000000000000000000000000000006,0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE | 0x80B4B22f31003e5F6E45bbe8DeEBe5540ABa940D | ["11155420","5224473277236331295","0x114A20A10b43D4115e5aeef7345a1A71d2a60C57",["0xE4aB69C077896252FAFBD49EFD26B5D171A32410","0x4200000000000000000000000000000000000006","0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"],"0x80B4B22f31003e5F6E45bbe8DeEBe5540ABa940D"] |
+|Gnosis Chaido | 10200    | 8871595565390010547 | 0x19b1bac554111517831ACadc0FD119D23Bb14391 | 0xDCA67FD8324990792C0bfaE95903B8A64097754F,0x18c8a7ec7897177E4529065a7E7B0878358B3BfF,0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE | 0xeB955fDF00A445c39DE95d5A98CADa03da0904FD | ["10200","8871595565390010547","0x19b1bac554111517831ACadc0FD119D23Bb14391",["0xDCA67FD8324990792C0bfaE95903B8A64097754F","0x18c8a7ec7897177E4529065a7E7B0878358B3BfF","0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"],"0xeB955fDF00A445c39DE95d5A98CADa03da0904FD"] | 
+|Sepolia       | 11155111 | 16015286601757825753 | 0x0BF3dE8c5D3e8A2B34D2BEeB17ABfCeBaf363A59 | 0x779877A7B0D9E8603169DdbD7836e478b4624789,0x097D90c9d3E0B50Ca60e1ae45F6A81010f9FB534,0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE | 0x5Bfe699166CE0B76AEB29F7B0f7C0c79703D18D5 | ["11155111","16015286601757825753","0x0BF3dE8c5D3e8A2B34D2BEeB17ABfCeBaf363A59",["0x779877A7B0D9E8603169DdbD7836e478b4624789","0x097D90c9d3E0B50Ca60e1ae45F6A81010f9FB534","0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"],"0x5Bfe699166CE0B76AEB29F7B0f7C0c79703D18D5"] |  
 
 ## Deployed Contracts 
 The following are the deployed contracts for Margari. These contracts interact
@@ -83,7 +81,11 @@ The following are the deployed contracts for Margari. These contracts interact
 | 421614   | MProjectFactory.sol | [0x6d732665fE1b1FD497e8B7E7bBfD7903AE38289B](https://sepolia.arbiscan.io/address/0x6d732665fE1b1FD497e8B7E7bBfD7903AE38289B) |
 | 421614   | MargariTestToken.sol| [0x5107984C96297564eE9aDC5c77e986B41c9aD25C](https://sepolia.arbiscan.io/address/0x5107984C96297564eE9aDC5c77e986B41c9aD25C) |
 | 421614   | MProjectManager.sol | [0x2e2eBFFA0077f7fb893AC592664404af03A301a9](https://sepolia.arbiscan.io/address/0x2e2eBFFA0077f7fb893AC592664404af03A301a9)                                           |
-|          |                     |                                                |
+
+
+## Destinations
+| Chain    | Contract            | Address                                    | 
+|----------|---------------------|--------------------------------------------|
 |*Sepolia* |   (Testnet)         |                                            |
 | 11155111 | MRegister.sol       | [0x547E3994Cb80D773B9CC701b2D7867Acb016310f](https://sepolia.etherscan.io/address/0x547E3994Cb80D773B9CC701b2D7867Acb016310f) |
 | 11155111 | GVaultFactory.sol   | [0xAE395747B112AFC3C02E22Da40e78948A551A03e](https://sepolia.etherscan.io/address/0xAE395747B112AFC3C02E22Da40e78948A551A03e) |
@@ -93,4 +95,40 @@ The following are the deployed contracts for Margari. These contracts interact
 | 11155111 | Margari.sol         | [0x404431A5e61Aed2352173Af68f19C768F84904ee](https://sepolia.etherscan.io/address/0x404431A5e61Aed2352173Af68f19C768F84904ee) |
 | 11155111 | MargariTestToken.sol| [0xEd26c5374fCa573c15b678423A5eb07584ba07E1](https://sepolia.etherscan.io/address/0xEd26c5374fCa573c15b678423A5eb07584ba07E1) |
 
-**NOTE:** Margari is only is deployed on Sepolia as it is utilised for claiming Gilts only.
+
+|*Base Sepolia* |   (Testnet)         |                                            |
+| Chain    | Contract            | Address                                    | 
+|----------|---------------------|--------------------------------------------|
+| 84532 | MRegister.sol       | [0x24f38d0d2eF787c45FE62a1C9BE1711d01c5b83C](https://sepolia.basescan.org/address/0x24f38d0d2eF787c45FE62a1C9BE1711d01c5b83C) |
+| 84532 | GVaultFactory.sol   | [0x3aA2b4A9B705Afb984FC679A59AA690D410B91B2](https://sepolia.basescan.org/address/0x3aA2b4A9B705Afb984FC679A59AA690D410B91B2) |
+| 84532 | GiltContract.sol    | [0x47B7A70883F1F63572171Ed6b567C2c27d47815F](https://sepolia.basescan.org/address/0x47B7A70883F1F63572171Ed6b567C2c27d47815F) |
+| 84532 | MSender.sol         | [0xE92dfDf9E5a38038e09260caa13Cb3aE1d0e4aBA](https://sepolia.basescan.org/address/0xE92dfDf9E5a38038e09260caa13Cb3aE1d0e4aBA) |
+| 84532 | MReciever.sol       | [0x7bc1e292ce4130f300a5faf66bf6c3064527c741](https://sepolia.basescan.org/address/0x7bc1e292ce4130f300a5faf66bf6c3064527c741) |        
+| 84532 | Margari.sol         | [0x6fc6E8eEab7896D500f2D53cA4e3e12DBB8E92f3](https://sepolia.basescan.org/address/0x6fc6E8eEab7896D500f2D53cA4e3e12DBB8E92f3) |
+| 84532 | MargariTestToken.sol| [0x5Bfe699166CE0B76AEB29F7B0f7C0c79703D18D5](https://sepolia.basescan.org/address/0x5Bfe699166CE0B76AEB29F7B0f7C0c79703D18D5) |
+
+
+|*Gnosis Chaido Testnet* |   (Testnet)         |                                            |
+| Chain    | Contract            | Address                                    | 
+|----------|---------------------|--------------------------------------------|
+| 10200 | MRegister.sol       | [0x24f38d0d2eF787c45FE62a1C9BE1711d01c5b83C](https://gnosis-chiado.blockscout.com/address/0x24f38d0d2eF787c45FE62a1C9BE1711d01c5b83C) |
+| 10200 | GVaultFactory.sol   | [0x3aA2b4A9B705Afb984FC679A59AA690D410B91B2](https://gnosis-chiado.blockscout.com/address/0x3aA2b4A9B705Afb984FC679A59AA690D410B91B2) |
+| 10200 | GiltContract.sol    | [0x47B7A70883F1F63572171Ed6b567C2c27d47815F](https://gnosis-chiado.blockscout.com/address/0x47B7A70883F1F63572171Ed6b567C2c27d47815F) |
+| 10200 | MSender.sol         | [0xE92dfDf9E5a38038e09260caa13Cb3aE1d0e4aBA](https://gnosis-chiado.blockscout.com/address/0xE92dfDf9E5a38038e09260caa13Cb3aE1d0e4aBA) |
+| 10200 | MReciever.sol       | [0xeB955fDF00A445c39DE95d5A98CADa03da0904FD](https://gnosis-chiado.blockscout.com/address/0xeB955fDF00A445c39DE95d5A98CADa03da0904FD) |        
+| 10200 | Margari.sol         | [0x5Bfe699166CE0B76AEB29F7B0f7C0c79703D18D5](https://gnosis-chiado.blockscout.com/address/0x5Bfe699166CE0B76AEB29F7B0f7C0c79703D18D5) |
+| 10200 | MargariTestToken.sol| [0x80B4B22f31003e5F6E45bbe8DeEBe5540ABa940D](https://gnosis-chiado.blockscout.com/address/0x80B4B22f31003e5F6E45bbe8DeEBe5540ABa940D) |
+
+
+|*OP Sepolia* |   (Testnet)         |                                            |
+| Chain    | Contract            | Address                                    | 
+|----------|---------------------|--------------------------------------------|
+| 11155420 | MRegister.sol       | [0x24f38d0d2eF787c45FE62a1C9BE1711d01c5b83C](https://sepolia-optimism.etherscan.io/address/0x24f38d0d2eF787c45FE62a1C9BE1711d01c5b83C) |
+| 11155420 | GVaultFactory.sol   | [0x3aA2b4A9B705Afb984FC679A59AA690D410B91B2](https://sepolia-optimism.etherscan.io/address/0x3aA2b4A9B705Afb984FC679A59AA690D410B91B2) |
+| 11155420 | GiltContract.sol    | [0x47B7A70883F1F63572171Ed6b567C2c27d47815F](https://sepolia-optimism.etherscan.io/address/0x47B7A70883F1F63572171Ed6b567C2c27d47815F) |
+| 11155420 | MSender.sol         | [0xE92dfDf9E5a38038e09260caa13Cb3aE1d0e4aBA](https://sepolia-optimism.etherscan.io/address/0xE92dfDf9E5a38038e09260caa13Cb3aE1d0e4aBA) |
+| 11155420 | MReciever.sol       | [0xeB955fDF00A445c39DE95d5A98CADa03da0904FD](https://sepolia-optimism.etherscan.io/address/0xeB955fDF00A445c39DE95d5A98CADa03da0904FD) |        
+| 11155420 | Margari.sol         | [0x5Bfe699166CE0B76AEB29F7B0f7C0c79703D18D5](https://sepolia-optimism.etherscan.io/address/0x5Bfe699166CE0B76AEB29F7B0f7C0c79703D18D5) |
+| 11155420 | MargariTestToken.sol| [0x80B4B22f31003e5F6E45bbe8DeEBe5540ABa940D](https://sepolia-optimism.etherscan.io/address/0x80B4B22f31003e5F6E45bbe8DeEBe5540ABa940D) |
+
+**NOTE:** Margari is deployed on Base Sepolia, Gnosis Chaido, OP Sepolia, and Sepolia for claiming Gilts only.
