@@ -58,6 +58,7 @@ The format for the destination configuration *tuple* that needs to be set on the
 ["${chain id}", "${Chainlink Destination Selector}","${Chainlink Router Contract}",["${Accepted Chainlink Payment Token}",...], "${deployment address of MReciever contract}"]
 
 
+
 |Chain Name    | Chain Id | CCIP Chain Selector  | CCIP Router Addresss                       | Fee Token Addresses | Margari Gilt Reciever Address | Config Object | 
 |--------------|----------|------------------ ---|--------------------------------------------|---------------------|-------------------------------|---------------|
 |Base Sepolia  | 84532    | 10344971235874465080 | 0xD3b06cEbF099CE7DA4AcCf578aaebFDBd6e88a93 | 0xE4aB69C077896252FAFBD49EFD26B5D171A32410,0x4200000000000000000000000000000000000006,0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE | 0x7bc1e292ce4130f300a5faf66bf6c3064527c741 |  |
