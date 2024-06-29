@@ -111,9 +111,10 @@ The following are the deployed contracts for Margari. These contracts interact
 | 11155111 | MargariTestToken.sol| [0xEd26c5374fCa573c15b678423A5eb07584ba07E1](https://sepolia.etherscan.io/address/0xEd26c5374fCa573c15b678423A5eb07584ba07E1) |
 
 
-|*Base Sepolia* |   (Testnet)         |                                            |
+
 | Chain    | Contract            | Address                                    | 
 |----------|---------------------|--------------------------------------------|
+|*Base Sepolia* |   (Testnet)         |                                            |
 | 84532 | MRegister.sol       | [0x24f38d0d2eF787c45FE62a1C9BE1711d01c5b83C](https://sepolia.basescan.org/address/0x24f38d0d2eF787c45FE62a1C9BE1711d01c5b83C) |
 | 84532 | GVaultFactory.sol   | [0x3aA2b4A9B705Afb984FC679A59AA690D410B91B2](https://sepolia.basescan.org/address/0x3aA2b4A9B705Afb984FC679A59AA690D410B91B2) |
 | 84532 | GiltContract.sol    | [0x47B7A70883F1F63572171Ed6b567C2c27d47815F](https://sepolia.basescan.org/address/0x47B7A70883F1F63572171Ed6b567C2c27d47815F) |
@@ -123,9 +124,10 @@ The following are the deployed contracts for Margari. These contracts interact
 | 84532 | MargariTestToken.sol| [0x5Bfe699166CE0B76AEB29F7B0f7C0c79703D18D5](https://sepolia.basescan.org/address/0x5Bfe699166CE0B76AEB29F7B0f7C0c79703D18D5) |
 
 
-|*Gnosis Chaido Testnet* |   (Testnet)         |                                            |
+
 | Chain    | Contract            | Address                                    | 
 |----------|---------------------|--------------------------------------------|
+|*Gnosis Chaido Testnet* |   (Testnet)         |                                            |
 | 10200 | MRegister.sol       | [0x24f38d0d2eF787c45FE62a1C9BE1711d01c5b83C](https://gnosis-chiado.blockscout.com/address/0x24f38d0d2eF787c45FE62a1C9BE1711d01c5b83C) |
 | 10200 | GVaultFactory.sol   | [0x3aA2b4A9B705Afb984FC679A59AA690D410B91B2](https://gnosis-chiado.blockscout.com/address/0x3aA2b4A9B705Afb984FC679A59AA690D410B91B2) |
 | 10200 | GiltContract.sol    | [0x47B7A70883F1F63572171Ed6b567C2c27d47815F](https://gnosis-chiado.blockscout.com/address/0x47B7A70883F1F63572171Ed6b567C2c27d47815F) |
@@ -135,9 +137,10 @@ The following are the deployed contracts for Margari. These contracts interact
 | 10200 | MargariTestToken.sol| [0x80B4B22f31003e5F6E45bbe8DeEBe5540ABa940D](https://gnosis-chiado.blockscout.com/address/0x80B4B22f31003e5F6E45bbe8DeEBe5540ABa940D) |
 
 
-|*OP Sepolia* |   (Testnet)         |                                            |
+
 | Chain    | Contract            | Address                                    | 
 |----------|---------------------|--------------------------------------------|
+|*OP Sepolia* |   (Testnet)         |                                            |
 | 11155420 | MRegister.sol       | [0x24f38d0d2eF787c45FE62a1C9BE1711d01c5b83C](https://sepolia-optimism.etherscan.io/address/0x24f38d0d2eF787c45FE62a1C9BE1711d01c5b83C) |
 | 11155420 | GVaultFactory.sol   | [0x3aA2b4A9B705Afb984FC679A59AA690D410B91B2](https://sepolia-optimism.etherscan.io/address/0x3aA2b4A9B705Afb984FC679A59AA690D410B91B2) |
 | 11155420 | GiltContract.sol    | [0x47B7A70883F1F63572171Ed6b567C2c27d47815F](https://sepolia-optimism.etherscan.io/address/0x47B7A70883F1F63572171Ed6b567C2c27d47815F) |
